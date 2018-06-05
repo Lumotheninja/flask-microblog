@@ -1,114 +1,106 @@
-2018-05-29 16:52:04,725 INFO: Microblog startup [in C:\Users\Lumo\Desktop\microblog\app\__init__.py:47]
-2018-05-29 17:16:57,158 INFO: Microblog startup [in C:\Users\Lumo\Desktop\microblog\app\__init__.py:47]
-2018-05-29 17:17:02,114 ERROR: Exception on /login [GET] [in c:\users\lumo\envs\flask\lib\site-packages\flask\app.py:1761]
+2018-06-05 12:45:43,061 ERROR: Exception on /search [GET] [in c:\users\woongw~1\envs\flaskt~1\lib\site-packages\flask\app.py:1560]
 Traceback (most recent call last):
-  File "c:\users\lumo\envs\flask\lib\site-packages\flask\app.py", line 2292, in wsgi_app
+  File "c:\users\woongw~1\envs\flaskt~1\lib\site-packages\flask\app.py", line 1982, in wsgi_app
     response = self.full_dispatch_request()
-  File "c:\users\lumo\envs\flask\lib\site-packages\flask\app.py", line 1815, in full_dispatch_request
+  File "c:\users\woongw~1\envs\flaskt~1\lib\site-packages\flask\app.py", line 1614, in full_dispatch_request
     rv = self.handle_user_exception(e)
-  File "c:\users\lumo\envs\flask\lib\site-packages\flask\app.py", line 1718, in handle_user_exception
+  File "c:\users\woongw~1\envs\flaskt~1\lib\site-packages\flask\app.py", line 1517, in handle_user_exception
     reraise(exc_type, exc_value, tb)
-  File "c:\users\lumo\envs\flask\lib\site-packages\flask\_compat.py", line 35, in reraise
-    raise value
-  File "c:\users\lumo\envs\flask\lib\site-packages\flask\app.py", line 1813, in full_dispatch_request
+  File "c:\users\woongw~1\envs\flaskt~1\lib\site-packages\flask\app.py", line 1612, in full_dispatch_request
     rv = self.dispatch_request()
-  File "c:\users\lumo\envs\flask\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+  File "c:\users\woongw~1\envs\flaskt~1\lib\site-packages\flask\app.py", line 1598, in dispatch_request
     return self.view_functions[rule.endpoint](**req.view_args)
-  File "C:\Users\Lumo\Desktop\microblog\app\routes.py", line 61, in login
-    return render_template('login.html', title='Sign In', form=form)
-  File "c:\users\lumo\envs\flask\lib\site-packages\flask\templating.py", line 135, in render_template
-    context, ctx.app)
-  File "c:\users\lumo\envs\flask\lib\site-packages\flask\templating.py", line 117, in _render
-    rv = template.render(context)
-  File "c:\users\lumo\envs\flask\lib\site-packages\jinja2\environment.py", line 1008, in render
-    return self.environment.handle_exception(exc_info, True)
-  File "c:\users\lumo\envs\flask\lib\site-packages\jinja2\environment.py", line 780, in handle_exception
-    reraise(exc_type, exc_value, tb)
-  File "c:\users\lumo\envs\flask\lib\site-packages\jinja2\_compat.py", line 37, in reraise
-    raise value.with_traceback(tb)
-  File "C:\Users\Lumo\Desktop\microblog\app\templates\login.html", line 2, in top-level template code
-    {% import 'bootstrap/wtf.html' as wtf %}
-  File "C:\Users\Lumo\Desktop\microblog\app\templates\base.html", line 1, in top-level template code
-    {% extends 'bootstrap/base.html' %}
-  File "c:\users\lumo\envs\flask\lib\site-packages\flask_bootstrap\templates\bootstrap\base.html", line 1, in top-level template code
-    {% block doc -%}
-  File "c:\users\lumo\envs\flask\lib\site-packages\flask_bootstrap\templates\bootstrap\base.html", line 4, in block "doc"
-    {%- block html %}
-  File "c:\users\lumo\envs\flask\lib\site-packages\flask_bootstrap\templates\bootstrap\base.html", line 20, in block "html"
-    {% block body -%}
-  File "c:\users\lumo\envs\flask\lib\site-packages\flask_bootstrap\templates\bootstrap\base.html", line 26, in block "body"
-    {% block scripts %}
-  File "C:\Users\Lumo\Desktop\microblog\app\templates\base.html", line 5, in block "scripts"
-    {{ moment.include_moment() }}
-  File "c:\users\lumo\envs\flask\lib\site-packages\jinja2\environment.py", line 430, in getattr
-    return getattr(obj, attribute)
-jinja2.exceptions.UndefinedError: 'moment' is undefined
-2018-05-29 17:17:34,496 INFO: Microblog startup [in C:\Users\Lumo\Desktop\microblog\app\__init__.py:49]
-2018-05-29 21:37:08,052 INFO: Microblog startup [in C:\Users\Lumo\Desktop\microblog\app\__init__.py:52]
-2018-05-29 21:38:08,593 INFO: Microblog startup [in C:\Users\Lumo\Desktop\microblog\app\__init__.py:52]
-2018-05-29 21:39:34,336 INFO: Microblog startup [in C:\Users\Lumo\Desktop\microblog\app\__init__.py:52]
-2018-05-29 21:40:25,868 INFO: Microblog startup [in C:\Users\Lumo\Desktop\microblog\app\__init__.py:52]
-2018-05-29 21:42:25,622 INFO: Microblog startup [in C:\Users\Lumo\Desktop\microblog\app\__init__.py:52]
-2018-05-29 22:10:22,130 INFO: Microblog startup [in C:\Users\Lumo\Desktop\microblog\app\__init__.py:52]
-2018-05-29 22:11:02,921 INFO: Microblog startup [in C:\Users\Lumo\Desktop\microblog\app\__init__.py:52]
-2018-05-29 22:11:20,752 INFO: Microblog startup [in C:\Users\Lumo\Desktop\microblog\app\__init__.py:52]
-2018-05-29 22:13:03,064 INFO: Microblog startup [in C:\Users\Lumo\Desktop\microblog\app\__init__.py:52]
-2018-05-29 22:14:11,801 INFO: Microblog startup [in C:\Users\Lumo\Desktop\microblog\app\__init__.py:52]
-2018-05-29 22:14:26,616 INFO: Microblog startup [in C:\Users\Lumo\Desktop\microblog\app\__init__.py:52]
-2018-05-29 22:14:30,850 INFO: Microblog startup [in C:\Users\Lumo\Desktop\microblog\app\__init__.py:52]
-2018-05-29 22:16:17,039 INFO: Microblog startup [in C:\Users\Lumo\Desktop\microblog\app\__init__.py:52]
-2018-05-29 22:18:13,246 INFO: Microblog startup [in C:\Users\Lumo\Desktop\microblog\app\__init__.py:52]
-2018-05-29 22:18:32,237 INFO: Microblog startup [in C:\Users\Lumo\Desktop\microblog\app\__init__.py:52]
-2018-05-29 22:18:41,530 INFO: Microblog startup [in C:\Users\Lumo\Desktop\microblog\app\__init__.py:52]
-2018-05-29 22:18:52,757 INFO: Microblog startup [in C:\Users\Lumo\Desktop\microblog\app\__init__.py:52]
-2018-05-29 22:19:04,688 INFO: Microblog startup [in C:\Users\Lumo\Desktop\microblog\app\__init__.py:52]
-2018-05-29 22:24:34,213 INFO: Microblog startup [in C:\Users\Lumo\Desktop\microblog\app\__init__.py:52]
-2018-05-29 22:26:37,813 INFO: Microblog startup [in C:\Users\Lumo\Desktop\microblog\app\__init__.py:52]
-2018-05-29 22:28:57,669 INFO: Microblog startup [in C:\Users\Lumo\Desktop\microblog\app\__init__.py:52]
-2018-05-29 22:29:04,061 INFO: Microblog startup [in C:\Users\Lumo\Desktop\microblog\app\__init__.py:52]
-2018-05-29 22:29:32,424 INFO: Microblog startup [in C:\Users\Lumo\Desktop\microblog\app\__init__.py:52]
-2018-05-29 22:30:53,398 INFO: Microblog startup [in C:\Users\Lumo\Desktop\microblog\app\__init__.py:52]
-2018-05-29 22:30:56,586 INFO: Microblog startup [in C:\Users\Lumo\Desktop\microblog\app\__init__.py:52]
-2018-05-29 22:31:11,269 INFO: Microblog startup [in C:\Users\Lumo\Desktop\microblog\app\__init__.py:52]
-2018-05-29 22:36:47,932 INFO: Microblog startup [in C:\Users\Lumo\Desktop\microblog\app\__init__.py:52]
-2018-05-29 22:42:13,200 INFO: Microblog startup [in C:\Users\Lumo\Desktop\microblog\app\__init__.py:52]
-2018-05-29 22:58:44,140 INFO: Microblog startup [in C:\Users\Lumo\Desktop\microblog\app\__init__.py:52]
-2018-05-29 23:19:26,390 INFO: Microblog startup [in C:\Users\Lumo\Desktop\microblog\app\__init__.py:52]
-2018-05-29 23:19:48,653 INFO: Microblog startup [in C:\Users\Lumo\Desktop\microblog\app\__init__.py:52]
-2018-06-02 09:46:44,320 INFO: Microblog startup [in C:\Users\Lumo\Desktop\microblog\app\__init__.py:52]
-2018-06-02 09:47:12,790 INFO: Microblog startup [in C:\Users\Lumo\Desktop\microblog\app\__init__.py:52]
-2018-06-02 09:47:55,104 INFO: Microblog startup [in C:\Users\Lumo\Desktop\microblog\app\__init__.py:52]
-2018-06-02 09:48:06,489 INFO: Microblog startup [in C:\Users\Lumo\Desktop\microblog\app\__init__.py:52]
-2018-06-02 09:48:44,162 INFO: Microblog startup [in C:\Users\Lumo\Desktop\microblog\app\__init__.py:52]
-2018-06-02 09:51:21,179 INFO: Microblog startup [in C:\Users\Lumo\Desktop\microblog\app\__init__.py:52]
-2018-06-02 09:54:33,572 INFO: Microblog startup [in C:\Users\Lumo\Desktop\microblog\app\__init__.py:52]
-2018-06-02 09:56:03,921 INFO: Microblog startup [in C:\Users\Lumo\Desktop\microblog\app\__init__.py:52]
-2018-06-02 09:57:12,749 INFO: Microblog startup [in C:\Users\Lumo\Desktop\microblog\app\__init__.py:52]
-2018-06-02 09:57:28,012 INFO: Microblog startup [in C:\Users\Lumo\Desktop\microblog\app\__init__.py:52]
-2018-06-02 09:57:52,950 INFO: Microblog startup [in C:\Users\Lumo\Desktop\microblog\app\__init__.py:52]
-2018-06-02 09:59:07,696 INFO: Microblog startup [in C:\Users\Lumo\Desktop\microblog\app\__init__.py:52]
-2018-06-02 10:00:27,677 INFO: Microblog startup [in C:\Users\Lumo\Desktop\microblog\app\__init__.py:52]
-2018-06-02 10:00:45,262 INFO: Microblog startup [in C:\Users\Lumo\Desktop\microblog\app\__init__.py:52]
-2018-06-02 10:01:24,678 INFO: Microblog startup [in C:\Users\Lumo\Desktop\microblog\app\__init__.py:52]
-2018-06-02 10:01:30,514 ERROR: Exception on /translate [POST] [in c:\users\lumo\envs\flask\lib\site-packages\flask\app.py:1761]
-Traceback (most recent call last):
-  File "c:\users\lumo\envs\flask\lib\site-packages\flask\app.py", line 2292, in wsgi_app
-    response = self.full_dispatch_request()
-  File "c:\users\lumo\envs\flask\lib\site-packages\flask\app.py", line 1815, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-  File "c:\users\lumo\envs\flask\lib\site-packages\flask\app.py", line 1718, in handle_user_exception
-    reraise(exc_type, exc_value, tb)
-  File "c:\users\lumo\envs\flask\lib\site-packages\flask\_compat.py", line 35, in reraise
-    raise value
-  File "c:\users\lumo\envs\flask\lib\site-packages\flask\app.py", line 1813, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "c:\users\lumo\envs\flask\lib\site-packages\flask\app.py", line 1799, in dispatch_request
-    return self.view_functions[rule.endpoint](**req.view_args)
-  File "c:\users\lumo\envs\flask\lib\site-packages\flask_login\utils.py", line 261, in decorated_view
+  File "c:\users\woongw~1\envs\flaskt~1\lib\site-packages\flask_login\utils.py", line 228, in decorated_view
     return func(*args, **kwargs)
-  File "C:\Users\Lumo\Desktop\microblog\app\routes.py", line 205, in translate_text
-    request.form['dest_language'])})
-  File "C:\Users\Lumo\Desktop\microblog\app\translate.py", line 15, in translate
-    print (r.content.text)
-AttributeError: 'bytes' object has no attribute 'text'
-2018-06-02 10:03:08,156 INFO: Microblog startup [in C:\Users\Lumo\Desktop\microblog\app\__init__.py:52]
+  File "C:\Users\Woong Wen Tat\flask-microblog\app\main\routes.py", line 144, in search
+    current_app.config['POSTS_PER_PAGE'])
+  File "C:\Users\Woong Wen Tat\flask-microblog\app\models.py", line 91, in search
+    ids, total = query_index(cls.__tablename__, expression, page, per_page)
+  File "C:\Users\Woong Wen Tat\flask-microblog\app\search.py", line 21, in query_index
+    if not current_app.elasticsearch:
+  File "c:\users\woongw~1\envs\flaskt~1\lib\site-packages\werkzeug\local.py", line 347, in __getattr__
+    return getattr(self._get_current_object(), name)
+AttributeError: 'Flask' object has no attribute 'elasticsearch'
+2018-06-05 12:46:45,588 ERROR: Exception on /search [GET] [in c:\users\woongw~1\envs\flaskt~1\lib\site-packages\flask\app.py:1560]
+Traceback (most recent call last):
+  File "c:\users\woongw~1\envs\flaskt~1\lib\site-packages\flask\app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "c:\users\woongw~1\envs\flaskt~1\lib\site-packages\flask\app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "c:\users\woongw~1\envs\flaskt~1\lib\site-packages\flask\app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "c:\users\woongw~1\envs\flaskt~1\lib\site-packages\flask\app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\users\woongw~1\envs\flaskt~1\lib\site-packages\flask\app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "c:\users\woongw~1\envs\flaskt~1\lib\site-packages\flask_login\utils.py", line 228, in decorated_view
+    return func(*args, **kwargs)
+  File "C:\Users\Woong Wen Tat\flask-microblog\app\main\routes.py", line 144, in search
+    current_app.config['POSTS_PER_PAGE'])
+  File "C:\Users\Woong Wen Tat\flask-microblog\app\models.py", line 91, in search
+    ids, total = query_index(cls.__tablename__, expression, page, per_page)
+  File "C:\Users\Woong Wen Tat\flask-microblog\app\search.py", line 21, in query_index
+    if not current_app.elasticsearch:
+  File "c:\users\woongw~1\envs\flaskt~1\lib\site-packages\werkzeug\local.py", line 347, in __getattr__
+    return getattr(self._get_current_object(), name)
+AttributeError: 'Flask' object has no attribute 'elasticsearch'
+2018-06-05 12:49:22,358 INFO: Microblog startup [in C:\Users\Woong Wen Tat\flask-microblog\app\__init__.py:76]
+2018-06-05 12:49:41,121 ERROR: Exception on /search [GET] [in c:\users\woongw~1\envs\flaskt~1\lib\site-packages\flask\app.py:1560]
+Traceback (most recent call last):
+  File "c:\users\woongw~1\envs\flaskt~1\lib\site-packages\flask\app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "c:\users\woongw~1\envs\flaskt~1\lib\site-packages\flask\app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "c:\users\woongw~1\envs\flaskt~1\lib\site-packages\flask\app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "c:\users\woongw~1\envs\flaskt~1\lib\site-packages\flask\app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\users\woongw~1\envs\flaskt~1\lib\site-packages\flask\app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "c:\users\woongw~1\envs\flaskt~1\lib\site-packages\flask_login\utils.py", line 228, in decorated_view
+    return func(*args, **kwargs)
+  File "C:\Users\Woong Wen Tat\flask-microblog\app\main\routes.py", line 144, in search
+    current_app.config['POSTS_PER_PAGE'])
+  File "C:\Users\Woong Wen Tat\flask-microblog\app\models.py", line 91, in search
+    ids, total = query_index(cls.__tablename__, expression, page, per_page)
+  File "C:\Users\Woong Wen Tat\flask-microblog\app\search.py", line 26, in query_index
+    'from': (page - 1) * per_page, 'size': per_page})
+  File "c:\users\woongw~1\envs\flaskt~1\lib\site-packages\elasticsearch\client\utils.py", line 76, in _wrapped
+    return func(*args, params=params, **kwargs)
+  File "c:\users\woongw~1\envs\flaskt~1\lib\site-packages\elasticsearch\client\__init__.py", line 655, in search
+    doc_type, '_search'), params=params, body=body)
+  File "c:\users\woongw~1\envs\flaskt~1\lib\site-packages\elasticsearch\transport.py", line 314, in perform_request
+    status, headers_response, data = connection.perform_request(method, url, params, body, headers=headers, ignore=ignore, timeout=timeout)
+  File "c:\users\woongw~1\envs\flaskt~1\lib\site-packages\elasticsearch\connection\http_urllib3.py", line 175, in perform_request
+    raise ConnectionError('N/A', str(e), e)
+ConnectionError: ConnectionError(<urllib3.connection.HTTPConnection object at 0x0532F390>: Failed to establish a new connection: [Errno 10061] No connection could be made because the target machine actively refused it) caused by: NewConnectionError(<urllib3.connection.HTTPConnection object at 0x0532F390>: Failed to establish a new connection: [Errno 10061] No connection could be made because the target machine actively refused it)
+2018-06-05 12:50:42,165 INFO: Microblog startup [in C:\Users\Woong Wen Tat\flask-microblog\app\__init__.py:76]
+2018-06-05 12:50:55,609 ERROR: Exception on /search [GET] [in c:\users\woongw~1\envs\flaskt~1\lib\site-packages\flask\app.py:1560]
+Traceback (most recent call last):
+  File "c:\users\woongw~1\envs\flaskt~1\lib\site-packages\flask\app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "c:\users\woongw~1\envs\flaskt~1\lib\site-packages\flask\app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "c:\users\woongw~1\envs\flaskt~1\lib\site-packages\flask\app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "c:\users\woongw~1\envs\flaskt~1\lib\site-packages\flask\app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\users\woongw~1\envs\flaskt~1\lib\site-packages\flask\app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "c:\users\woongw~1\envs\flaskt~1\lib\site-packages\flask_login\utils.py", line 228, in decorated_view
+    return func(*args, **kwargs)
+  File "C:\Users\Woong Wen Tat\flask-microblog\app\main\routes.py", line 144, in search
+    current_app.config['POSTS_PER_PAGE'])
+  File "C:\Users\Woong Wen Tat\flask-microblog\app\models.py", line 91, in search
+    ids, total = query_index(cls.__tablename__, expression, page, per_page)
+  File "C:\Users\Woong Wen Tat\flask-microblog\app\search.py", line 26, in query_index
+    'from': (page - 1) * per_page, 'size': per_page})
+  File "c:\users\woongw~1\envs\flaskt~1\lib\site-packages\elasticsearch\client\utils.py", line 76, in _wrapped
+    return func(*args, params=params, **kwargs)
+  File "c:\users\woongw~1\envs\flaskt~1\lib\site-packages\elasticsearch\client\__init__.py", line 655, in search
+    doc_type, '_search'), params=params, body=body)
+  File "c:\users\woongw~1\envs\flaskt~1\lib\site-packages\elasticsearch\transport.py", line 314, in perform_request
+    status, headers_response, data = connection.perform_request(method, url, params, body, headers=headers, ignore=ignore, timeout=timeout)
+  File "c:\users\woongw~1\envs\flaskt~1\lib\site-packages\elasticsearch\connection\http_urllib3.py", line 175, in perform_request
+    raise ConnectionError('N/A', str(e), e)
+ConnectionError: ConnectionError(<urllib3.connection.HTTPConnection object at 0x052FC130>: Failed to establish a new connection: [Errno 10061] No connection could be made because the target machine actively refused it) caused by: NewConnectionError(<urllib3.connection.HTTPConnection object at 0x052FC130>: Failed to establish a new connection: [Errno 10061] No connection could be made because the target machine actively refused it)

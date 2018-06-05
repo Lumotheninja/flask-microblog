@@ -4,6 +4,7 @@ from dotenv import load_dotenv
 basedir = os.path.abspath(os.path.dirname(__file__))
 load_dotenv(os.path.join(basedir, 'microblog.env'))
 
+
 class Config(object):
     SECRET_KEY = os.environ.get('SECRET_KEY') or 'you-will-never-guess'
     SQLALCHEMY_DATABASE_URI = os.environ.get('DATABASE_URL') or \
@@ -18,3 +19,4 @@ class Config(object):
     LANGUAGES = ['en', 'es']
     YANDEX_KEY = os.environ.get('YANDEX_KEY')
     POSTS_PER_PAGE = 25
+    ELASTICSEARCH_URL = os.environ.get('ELASTICSEARCH_URL')

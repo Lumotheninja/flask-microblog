@@ -9,8 +9,6 @@ def translate(text, source_language, dest_language):
             not current_app.config['YANDEX_KEY']:
         return _('Error: the translation service is not configured.')
     auth = current_app.config['YANDEX_KEY']
-    print (auth)
-    print (1211)
     r = requests.get('https://translate.yandex.net/api/v1.5/tr.json/translate?key={}&text={}&lang={}-{}'.format(
         auth, text, source_language, dest_language))
     if r.status_code != 200:
