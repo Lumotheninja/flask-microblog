@@ -1,51 +1,4 @@
-2018-06-05 12:45:43,061 ERROR: Exception on /search [GET] [in c:\users\woongw~1\envs\flaskt~1\lib\site-packages\flask\app.py:1560]
-Traceback (most recent call last):
-  File "c:\users\woongw~1\envs\flaskt~1\lib\site-packages\flask\app.py", line 1982, in wsgi_app
-    response = self.full_dispatch_request()
-  File "c:\users\woongw~1\envs\flaskt~1\lib\site-packages\flask\app.py", line 1614, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-  File "c:\users\woongw~1\envs\flaskt~1\lib\site-packages\flask\app.py", line 1517, in handle_user_exception
-    reraise(exc_type, exc_value, tb)
-  File "c:\users\woongw~1\envs\flaskt~1\lib\site-packages\flask\app.py", line 1612, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "c:\users\woongw~1\envs\flaskt~1\lib\site-packages\flask\app.py", line 1598, in dispatch_request
-    return self.view_functions[rule.endpoint](**req.view_args)
-  File "c:\users\woongw~1\envs\flaskt~1\lib\site-packages\flask_login\utils.py", line 228, in decorated_view
-    return func(*args, **kwargs)
-  File "C:\Users\Woong Wen Tat\flask-microblog\app\main\routes.py", line 144, in search
-    current_app.config['POSTS_PER_PAGE'])
-  File "C:\Users\Woong Wen Tat\flask-microblog\app\models.py", line 91, in search
-    ids, total = query_index(cls.__tablename__, expression, page, per_page)
-  File "C:\Users\Woong Wen Tat\flask-microblog\app\search.py", line 21, in query_index
-    if not current_app.elasticsearch:
-  File "c:\users\woongw~1\envs\flaskt~1\lib\site-packages\werkzeug\local.py", line 347, in __getattr__
-    return getattr(self._get_current_object(), name)
-AttributeError: 'Flask' object has no attribute 'elasticsearch'
-2018-06-05 12:46:45,588 ERROR: Exception on /search [GET] [in c:\users\woongw~1\envs\flaskt~1\lib\site-packages\flask\app.py:1560]
-Traceback (most recent call last):
-  File "c:\users\woongw~1\envs\flaskt~1\lib\site-packages\flask\app.py", line 1982, in wsgi_app
-    response = self.full_dispatch_request()
-  File "c:\users\woongw~1\envs\flaskt~1\lib\site-packages\flask\app.py", line 1614, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-  File "c:\users\woongw~1\envs\flaskt~1\lib\site-packages\flask\app.py", line 1517, in handle_user_exception
-    reraise(exc_type, exc_value, tb)
-  File "c:\users\woongw~1\envs\flaskt~1\lib\site-packages\flask\app.py", line 1612, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "c:\users\woongw~1\envs\flaskt~1\lib\site-packages\flask\app.py", line 1598, in dispatch_request
-    return self.view_functions[rule.endpoint](**req.view_args)
-  File "c:\users\woongw~1\envs\flaskt~1\lib\site-packages\flask_login\utils.py", line 228, in decorated_view
-    return func(*args, **kwargs)
-  File "C:\Users\Woong Wen Tat\flask-microblog\app\main\routes.py", line 144, in search
-    current_app.config['POSTS_PER_PAGE'])
-  File "C:\Users\Woong Wen Tat\flask-microblog\app\models.py", line 91, in search
-    ids, total = query_index(cls.__tablename__, expression, page, per_page)
-  File "C:\Users\Woong Wen Tat\flask-microblog\app\search.py", line 21, in query_index
-    if not current_app.elasticsearch:
-  File "c:\users\woongw~1\envs\flaskt~1\lib\site-packages\werkzeug\local.py", line 347, in __getattr__
-    return getattr(self._get_current_object(), name)
-AttributeError: 'Flask' object has no attribute 'elasticsearch'
-2018-06-05 12:49:22,358 INFO: Microblog startup [in C:\Users\Woong Wen Tat\flask-microblog\app\__init__.py:76]
-2018-06-05 12:49:41,121 ERROR: Exception on /search [GET] [in c:\users\woongw~1\envs\flaskt~1\lib\site-packages\flask\app.py:1560]
+2018-06-05 14:19:28,400 ERROR: Exception on /search [GET] [in c:\users\woongw~1\envs\flaskt~1\lib\site-packages\flask\app.py:1560]
 Traceback (most recent call last):
   File "c:\users\woongw~1\envs\flaskt~1\lib\site-packages\flask\app.py", line 1982, in wsgi_app
     response = self.full_dispatch_request()
@@ -71,11 +24,12 @@ Traceback (most recent call last):
     doc_type, '_search'), params=params, body=body)
   File "c:\users\woongw~1\envs\flaskt~1\lib\site-packages\elasticsearch\transport.py", line 314, in perform_request
     status, headers_response, data = connection.perform_request(method, url, params, body, headers=headers, ignore=ignore, timeout=timeout)
-  File "c:\users\woongw~1\envs\flaskt~1\lib\site-packages\elasticsearch\connection\http_urllib3.py", line 175, in perform_request
-    raise ConnectionError('N/A', str(e), e)
-ConnectionError: ConnectionError(<urllib3.connection.HTTPConnection object at 0x0532F390>: Failed to establish a new connection: [Errno 10061] No connection could be made because the target machine actively refused it) caused by: NewConnectionError(<urllib3.connection.HTTPConnection object at 0x0532F390>: Failed to establish a new connection: [Errno 10061] No connection could be made because the target machine actively refused it)
-2018-06-05 12:50:42,165 INFO: Microblog startup [in C:\Users\Woong Wen Tat\flask-microblog\app\__init__.py:76]
-2018-06-05 12:50:55,609 ERROR: Exception on /search [GET] [in c:\users\woongw~1\envs\flaskt~1\lib\site-packages\flask\app.py:1560]
+  File "c:\users\woongw~1\envs\flaskt~1\lib\site-packages\elasticsearch\connection\http_urllib3.py", line 180, in perform_request
+    self._raise_error(response.status, raw_data)
+  File "c:\users\woongw~1\envs\flaskt~1\lib\site-packages\elasticsearch\connection\base.py", line 125, in _raise_error
+    raise HTTP_EXCEPTIONS.get(status_code, TransportError)(status_code, error_message, additional_info)
+NotFoundError: TransportError(404, u'index_not_found_exception', u'no such index')
+2018-06-05 14:19:49,338 ERROR: Exception on /search [GET] [in c:\users\woongw~1\envs\flaskt~1\lib\site-packages\flask\app.py:1560]
 Traceback (most recent call last):
   File "c:\users\woongw~1\envs\flaskt~1\lib\site-packages\flask\app.py", line 1982, in wsgi_app
     response = self.full_dispatch_request()
@@ -101,6 +55,63 @@ Traceback (most recent call last):
     doc_type, '_search'), params=params, body=body)
   File "c:\users\woongw~1\envs\flaskt~1\lib\site-packages\elasticsearch\transport.py", line 314, in perform_request
     status, headers_response, data = connection.perform_request(method, url, params, body, headers=headers, ignore=ignore, timeout=timeout)
-  File "c:\users\woongw~1\envs\flaskt~1\lib\site-packages\elasticsearch\connection\http_urllib3.py", line 175, in perform_request
-    raise ConnectionError('N/A', str(e), e)
-ConnectionError: ConnectionError(<urllib3.connection.HTTPConnection object at 0x052FC130>: Failed to establish a new connection: [Errno 10061] No connection could be made because the target machine actively refused it) caused by: NewConnectionError(<urllib3.connection.HTTPConnection object at 0x052FC130>: Failed to establish a new connection: [Errno 10061] No connection could be made because the target machine actively refused it)
+  File "c:\users\woongw~1\envs\flaskt~1\lib\site-packages\elasticsearch\connection\http_urllib3.py", line 180, in perform_request
+    self._raise_error(response.status, raw_data)
+  File "c:\users\woongw~1\envs\flaskt~1\lib\site-packages\elasticsearch\connection\base.py", line 125, in _raise_error
+    raise HTTP_EXCEPTIONS.get(status_code, TransportError)(status_code, error_message, additional_info)
+NotFoundError: TransportError(404, u'index_not_found_exception', u'no such index')
+2018-06-05 14:20:00,744 INFO: Microblog startup [in C:\Users\Woong Wen Tat\flask-microblog\app\__init__.py:76]
+2018-06-05 14:20:38,203 ERROR: Exception on /search [GET] [in c:\users\woongw~1\envs\flaskt~1\lib\site-packages\flask\app.py:1560]
+Traceback (most recent call last):
+  File "c:\users\woongw~1\envs\flaskt~1\lib\site-packages\flask\app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "c:\users\woongw~1\envs\flaskt~1\lib\site-packages\flask\app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "c:\users\woongw~1\envs\flaskt~1\lib\site-packages\flask\app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "c:\users\woongw~1\envs\flaskt~1\lib\site-packages\flask\app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\users\woongw~1\envs\flaskt~1\lib\site-packages\flask\app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "c:\users\woongw~1\envs\flaskt~1\lib\site-packages\flask_login\utils.py", line 228, in decorated_view
+    return func(*args, **kwargs)
+  File "C:\Users\Woong Wen Tat\flask-microblog\app\main\routes.py", line 144, in search
+    current_app.config['POSTS_PER_PAGE'])
+  File "C:\Users\Woong Wen Tat\flask-microblog\app\models.py", line 91, in search
+    ids, total = query_index(cls.__tablename__, expression, page, per_page)
+  File "C:\Users\Woong Wen Tat\flask-microblog\app\search.py", line 28, in query_index
+    return ids, search['hits']['totals']
+KeyError: 'totals'
+2018-06-05 14:21:57,006 INFO: Microblog startup [in C:\Users\Woong Wen Tat\flask-microblog\app\__init__.py:76]
+2018-06-05 14:27:13,516 INFO: Microblog startup [in C:\Users\Woong Wen Tat\flask-microblog\app\__init__.py:76]
+2018-06-05 17:12:16,404 INFO: Microblog startup [in C:\Users\Woong Wen Tat\flask-microblog\app\__init__.py:76]
+2018-06-05 17:27:26,637 INFO: Microblog startup [in C:\Users\Woong Wen Tat\flask-microblog\app\__init__.py:76]
+2018-06-05 17:29:42,756 INFO: Microblog startup [in C:\Users\Woong Wen Tat\flask-microblog\app\__init__.py:76]
+2018-06-05 17:42:30,453 INFO: Microblog startup [in C:\Users\Woong Wen Tat\flask-microblog\app\__init__.py:76]
+2018-06-05 17:42:42,306 INFO: Microblog startup [in C:\Users\Woong Wen Tat\flask-microblog\app\__init__.py:76]
+2018-06-05 17:47:06,203 INFO: Microblog startup [in C:\Users\Woong Wen Tat\flask-microblog\app\__init__.py:76]
+2018-06-05 17:47:28,428 INFO: Microblog startup [in C:\Users\Woong Wen Tat\flask-microblog\app\__init__.py:76]
+2018-06-05 17:47:48,430 INFO: Microblog startup [in C:\Users\Woong Wen Tat\flask-microblog\app\__init__.py:76]
+2018-06-05 17:48:22,138 INFO: Microblog startup [in C:\Users\Woong Wen Tat\flask-microblog\app\__init__.py:76]
+2018-06-06 17:12:34,252 INFO: Microblog startup [in C:\Users\Woong Wen Tat\flask-microblog\app\__init__.py:81]
+2018-06-06 17:12:42,499 INFO: Microblog startup [in C:\Users\Woong Wen Tat\flask-microblog\app\__init__.py:81]
+2018-06-06 17:12:46,588 INFO: Microblog startup [in C:\Users\Woong Wen Tat\flask-microblog\app\__init__.py:81]
+2018-06-06 17:12:51,885 INFO: Microblog startup [in C:\Users\Woong Wen Tat\flask-microblog\app\__init__.py:81]
+2018-06-06 17:19:49,851 INFO: Microblog startup [in C:\Users\Woong Wen Tat\flask-microblog\app\__init__.py:81]
+2018-06-06 17:20:36,190 ERROR: Exception on /messages [GET] [in c:\users\woongw~1\envs\flaskt~1\lib\site-packages\flask\app.py:1560]
+Traceback (most recent call last):
+  File "c:\users\woongw~1\envs\flaskt~1\lib\site-packages\flask\app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "c:\users\woongw~1\envs\flaskt~1\lib\site-packages\flask\app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "c:\users\woongw~1\envs\flaskt~1\lib\site-packages\flask\app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "c:\users\woongw~1\envs\flaskt~1\lib\site-packages\flask\app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\users\woongw~1\envs\flaskt~1\lib\site-packages\flask\app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "c:\users\woongw~1\envs\flaskt~1\lib\site-packages\flask_login\utils.py", line 228, in decorated_view
+    return func(*args, **kwargs)
+  File "C:\Users\Woong Wen Tat\flask-microblog\app\main\routes.py", line 180, in messages
+    user.add_notification('unread_message_count', user.new_messages())
+AttributeError: 'function' object has no attribute 'add_notification'
