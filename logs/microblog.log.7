@@ -1,139 +1,139 @@
-2018-05-27 12:23:55,061 INFO: Microblog startup [in C:\Users\Lumo\Desktop\microblog\app\__init__.py:42]
-2018-05-27 12:24:17,025 INFO: Microblog startup [in C:\Users\Lumo\Desktop\microblog\app\__init__.py:42]
-2018-05-29 10:30:00,725 INFO: Microblog startup [in C:\Users\Lumo\Desktop\microblog\app\__init__.py:42]
-2018-05-29 10:30:35,721 INFO: Microblog startup [in C:\Users\Lumo\Desktop\microblog\app\__init__.py:42]
-2018-05-29 10:30:49,069 INFO: Microblog startup [in C:\Users\Lumo\Desktop\microblog\app\__init__.py:42]
-2018-05-29 10:32:28,857 INFO: Microblog startup [in C:\Users\Lumo\Desktop\microblog\app\__init__.py:42]
-2018-05-29 10:32:38,521 ERROR: Exception on / [GET] [in c:\users\lumo\envs\flask\lib\site-packages\flask\app.py:1761]
+2018-06-05 12:26:34,157 ERROR: Exception on /search [GET] [in c:\users\woongw~1\envs\flaskt~1\lib\site-packages\flask\app.py:1560]
 Traceback (most recent call last):
-  File "c:\users\lumo\envs\flask\lib\site-packages\flask\app.py", line 2292, in wsgi_app
+  File "c:\users\woongw~1\envs\flaskt~1\lib\site-packages\flask\app.py", line 1982, in wsgi_app
     response = self.full_dispatch_request()
-  File "c:\users\lumo\envs\flask\lib\site-packages\flask\app.py", line 1815, in full_dispatch_request
+  File "c:\users\woongw~1\envs\flaskt~1\lib\site-packages\flask\app.py", line 1614, in full_dispatch_request
     rv = self.handle_user_exception(e)
-  File "c:\users\lumo\envs\flask\lib\site-packages\flask\app.py", line 1718, in handle_user_exception
+  File "c:\users\woongw~1\envs\flaskt~1\lib\site-packages\flask\app.py", line 1517, in handle_user_exception
     reraise(exc_type, exc_value, tb)
-  File "c:\users\lumo\envs\flask\lib\site-packages\flask\_compat.py", line 35, in reraise
-    raise value
-  File "c:\users\lumo\envs\flask\lib\site-packages\flask\app.py", line 1813, in full_dispatch_request
+  File "c:\users\woongw~1\envs\flaskt~1\lib\site-packages\flask\app.py", line 1612, in full_dispatch_request
     rv = self.dispatch_request()
-  File "c:\users\lumo\envs\flask\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+  File "c:\users\woongw~1\envs\flaskt~1\lib\site-packages\flask\app.py", line 1598, in dispatch_request
     return self.view_functions[rule.endpoint](**req.view_args)
-  File "c:\users\lumo\envs\flask\lib\site-packages\flask_login\utils.py", line 261, in decorated_view
+  File "c:\users\woongw~1\envs\flaskt~1\lib\site-packages\flask_login\utils.py", line 228, in decorated_view
     return func(*args, **kwargs)
-  File "C:\Users\Lumo\Desktop\microblog\app\routes.py", line 32, in index
-    posts = current_user.follower_posts().all()
-  File "c:\users\lumo\envs\flask\lib\site-packages\werkzeug\local.py", line 347, in __getattr__
+  File "C:\Users\Woong Wen Tat\flask-microblog\app\main\routes.py", line 144, in search
+    current_app.config['POSTS_PER_PAGE'])
+  File "C:\Users\Woong Wen Tat\flask-microblog\app\models.py", line 91, in search
+    ids, total = query_index(cls.__tablename__, expression, page, per_page)
+  File "C:\Users\Woong Wen Tat\flask-microblog\app\search.py", line 21, in query_index
+    if not current_app.elasticsearch:
+  File "c:\users\woongw~1\envs\flaskt~1\lib\site-packages\werkzeug\local.py", line 347, in __getattr__
     return getattr(self._get_current_object(), name)
-AttributeError: 'User' object has no attribute 'follower_posts'
-2018-05-29 10:32:40,852 ERROR: Exception on /index [GET] [in c:\users\lumo\envs\flask\lib\site-packages\flask\app.py:1761]
+AttributeError: 'Flask' object has no attribute 'elasticsearch'
+2018-06-05 12:26:46,513 ERROR: Exception on /search [GET] [in c:\users\woongw~1\envs\flaskt~1\lib\site-packages\flask\app.py:1560]
 Traceback (most recent call last):
-  File "c:\users\lumo\envs\flask\lib\site-packages\flask\app.py", line 2292, in wsgi_app
+  File "c:\users\woongw~1\envs\flaskt~1\lib\site-packages\flask\app.py", line 1982, in wsgi_app
     response = self.full_dispatch_request()
-  File "c:\users\lumo\envs\flask\lib\site-packages\flask\app.py", line 1815, in full_dispatch_request
+  File "c:\users\woongw~1\envs\flaskt~1\lib\site-packages\flask\app.py", line 1614, in full_dispatch_request
     rv = self.handle_user_exception(e)
-  File "c:\users\lumo\envs\flask\lib\site-packages\flask\app.py", line 1718, in handle_user_exception
+  File "c:\users\woongw~1\envs\flaskt~1\lib\site-packages\flask\app.py", line 1517, in handle_user_exception
     reraise(exc_type, exc_value, tb)
-  File "c:\users\lumo\envs\flask\lib\site-packages\flask\_compat.py", line 35, in reraise
-    raise value
-  File "c:\users\lumo\envs\flask\lib\site-packages\flask\app.py", line 1813, in full_dispatch_request
+  File "c:\users\woongw~1\envs\flaskt~1\lib\site-packages\flask\app.py", line 1612, in full_dispatch_request
     rv = self.dispatch_request()
-  File "c:\users\lumo\envs\flask\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+  File "c:\users\woongw~1\envs\flaskt~1\lib\site-packages\flask\app.py", line 1598, in dispatch_request
     return self.view_functions[rule.endpoint](**req.view_args)
-  File "c:\users\lumo\envs\flask\lib\site-packages\flask_login\utils.py", line 261, in decorated_view
+  File "c:\users\woongw~1\envs\flaskt~1\lib\site-packages\flask_login\utils.py", line 228, in decorated_view
     return func(*args, **kwargs)
-  File "C:\Users\Lumo\Desktop\microblog\app\routes.py", line 32, in index
-    posts = current_user.follower_posts().all()
-  File "c:\users\lumo\envs\flask\lib\site-packages\werkzeug\local.py", line 347, in __getattr__
+  File "C:\Users\Woong Wen Tat\flask-microblog\app\main\routes.py", line 144, in search
+    current_app.config['POSTS_PER_PAGE'])
+  File "C:\Users\Woong Wen Tat\flask-microblog\app\models.py", line 91, in search
+    ids, total = query_index(cls.__tablename__, expression, page, per_page)
+  File "C:\Users\Woong Wen Tat\flask-microblog\app\search.py", line 21, in query_index
+    if not current_app.elasticsearch:
+  File "c:\users\woongw~1\envs\flaskt~1\lib\site-packages\werkzeug\local.py", line 347, in __getattr__
     return getattr(self._get_current_object(), name)
-AttributeError: 'User' object has no attribute 'follower_posts'
-2018-05-29 10:32:43,266 ERROR: Exception on /index [GET] [in c:\users\lumo\envs\flask\lib\site-packages\flask\app.py:1761]
+AttributeError: 'Flask' object has no attribute 'elasticsearch'
+2018-06-05 12:29:22,779 ERROR: Exception on /index [POST] [in c:\users\woongw~1\envs\flaskt~1\lib\site-packages\flask\app.py:1560]
 Traceback (most recent call last):
-  File "c:\users\lumo\envs\flask\lib\site-packages\flask\app.py", line 2292, in wsgi_app
+  File "c:\users\woongw~1\envs\flaskt~1\lib\site-packages\flask\app.py", line 1982, in wsgi_app
     response = self.full_dispatch_request()
-  File "c:\users\lumo\envs\flask\lib\site-packages\flask\app.py", line 1815, in full_dispatch_request
+  File "c:\users\woongw~1\envs\flaskt~1\lib\site-packages\flask\app.py", line 1614, in full_dispatch_request
     rv = self.handle_user_exception(e)
-  File "c:\users\lumo\envs\flask\lib\site-packages\flask\app.py", line 1718, in handle_user_exception
+  File "c:\users\woongw~1\envs\flaskt~1\lib\site-packages\flask\app.py", line 1517, in handle_user_exception
     reraise(exc_type, exc_value, tb)
-  File "c:\users\lumo\envs\flask\lib\site-packages\flask\_compat.py", line 35, in reraise
-    raise value
-  File "c:\users\lumo\envs\flask\lib\site-packages\flask\app.py", line 1813, in full_dispatch_request
+  File "c:\users\woongw~1\envs\flaskt~1\lib\site-packages\flask\app.py", line 1612, in full_dispatch_request
     rv = self.dispatch_request()
-  File "c:\users\lumo\envs\flask\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+  File "c:\users\woongw~1\envs\flaskt~1\lib\site-packages\flask\app.py", line 1598, in dispatch_request
     return self.view_functions[rule.endpoint](**req.view_args)
-  File "c:\users\lumo\envs\flask\lib\site-packages\flask_login\utils.py", line 261, in decorated_view
+  File "c:\users\woongw~1\envs\flaskt~1\lib\site-packages\flask_login\utils.py", line 228, in decorated_view
     return func(*args, **kwargs)
-  File "C:\Users\Lumo\Desktop\microblog\app\routes.py", line 32, in index
-    posts = current_user.follower_posts().all()
-  File "c:\users\lumo\envs\flask\lib\site-packages\werkzeug\local.py", line 347, in __getattr__
+  File "C:\Users\Woong Wen Tat\flask-microblog\app\main\routes.py", line 35, in index
+    db.session.commit()
+  File "c:\users\woongw~1\envs\flaskt~1\lib\site-packages\sqlalchemy\orm\scoping.py", line 157, in do
+    return getattr(self.registry(), name)(*args, **kwargs)
+  File "c:\users\woongw~1\envs\flaskt~1\lib\site-packages\sqlalchemy\orm\session.py", line 906, in commit
+    self.transaction.commit()
+  File "c:\users\woongw~1\envs\flaskt~1\lib\site-packages\sqlalchemy\orm\session.py", line 468, in commit
+    self.session.dispatch.after_commit(self.session)
+  File "c:\users\woongw~1\envs\flaskt~1\lib\site-packages\sqlalchemy\event\attr.py", line 218, in __call__
+    fn(*args, **kw)
+  File "C:\Users\Woong Wen Tat\flask-microblog\app\models.py", line 112, in after_commit
+    add_to_index(obj.__tablename__, obj)
+  File "C:\Users\Woong Wen Tat\flask-microblog\app\search.py", line 5, in add_to_index
+    if not current_app.elasticsearch:
+  File "c:\users\woongw~1\envs\flaskt~1\lib\site-packages\werkzeug\local.py", line 347, in __getattr__
     return getattr(self._get_current_object(), name)
-AttributeError: 'User' object has no attribute 'follower_posts'
-2018-05-29 10:34:15,882 INFO: Microblog startup [in C:\Users\Lumo\Desktop\microblog\app\__init__.py:42]
-2018-05-29 10:34:22,026 ERROR: Exception on / [GET] [in c:\users\lumo\envs\flask\lib\site-packages\flask\app.py:1761]
+AttributeError: 'Flask' object has no attribute 'elasticsearch'
+2018-06-05 12:29:38,266 ERROR: Exception on /index [POST] [in c:\users\woongw~1\envs\flaskt~1\lib\site-packages\flask\app.py:1560]
 Traceback (most recent call last):
-  File "c:\users\lumo\envs\flask\lib\site-packages\flask\app.py", line 2292, in wsgi_app
+  File "c:\users\woongw~1\envs\flaskt~1\lib\site-packages\flask\app.py", line 1982, in wsgi_app
     response = self.full_dispatch_request()
-  File "c:\users\lumo\envs\flask\lib\site-packages\flask\app.py", line 1815, in full_dispatch_request
+  File "c:\users\woongw~1\envs\flaskt~1\lib\site-packages\flask\app.py", line 1614, in full_dispatch_request
     rv = self.handle_user_exception(e)
-  File "c:\users\lumo\envs\flask\lib\site-packages\flask\app.py", line 1718, in handle_user_exception
+  File "c:\users\woongw~1\envs\flaskt~1\lib\site-packages\flask\app.py", line 1517, in handle_user_exception
     reraise(exc_type, exc_value, tb)
-  File "c:\users\lumo\envs\flask\lib\site-packages\flask\_compat.py", line 35, in reraise
-    raise value
-  File "c:\users\lumo\envs\flask\lib\site-packages\flask\app.py", line 1813, in full_dispatch_request
+  File "c:\users\woongw~1\envs\flaskt~1\lib\site-packages\flask\app.py", line 1612, in full_dispatch_request
     rv = self.dispatch_request()
-  File "c:\users\lumo\envs\flask\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+  File "c:\users\woongw~1\envs\flaskt~1\lib\site-packages\flask\app.py", line 1598, in dispatch_request
     return self.view_functions[rule.endpoint](**req.view_args)
-  File "c:\users\lumo\envs\flask\lib\site-packages\flask_login\utils.py", line 261, in decorated_view
+  File "c:\users\woongw~1\envs\flaskt~1\lib\site-packages\flask_login\utils.py", line 228, in decorated_view
     return func(*args, **kwargs)
-  File "C:\Users\Lumo\Desktop\microblog\app\routes.py", line 32, in index
-    posts = current_user.followed_posts().all()
-  File "c:\users\lumo\envs\flask\lib\site-packages\werkzeug\local.py", line 347, in __getattr__
+  File "C:\Users\Woong Wen Tat\flask-microblog\app\main\routes.py", line 35, in index
+    db.session.commit()
+  File "c:\users\woongw~1\envs\flaskt~1\lib\site-packages\sqlalchemy\orm\scoping.py", line 157, in do
+    return getattr(self.registry(), name)(*args, **kwargs)
+  File "c:\users\woongw~1\envs\flaskt~1\lib\site-packages\sqlalchemy\orm\session.py", line 906, in commit
+    self.transaction.commit()
+  File "c:\users\woongw~1\envs\flaskt~1\lib\site-packages\sqlalchemy\orm\session.py", line 468, in commit
+    self.session.dispatch.after_commit(self.session)
+  File "c:\users\woongw~1\envs\flaskt~1\lib\site-packages\sqlalchemy\event\attr.py", line 218, in __call__
+    fn(*args, **kw)
+  File "C:\Users\Woong Wen Tat\flask-microblog\app\models.py", line 112, in after_commit
+    add_to_index(obj.__tablename__, obj)
+  File "C:\Users\Woong Wen Tat\flask-microblog\app\search.py", line 5, in add_to_index
+    if not current_app.elasticsearch:
+  File "c:\users\woongw~1\envs\flaskt~1\lib\site-packages\werkzeug\local.py", line 347, in __getattr__
     return getattr(self._get_current_object(), name)
-AttributeError: 'User' object has no attribute 'followed_posts'
-2018-05-29 10:34:23,833 ERROR: Exception on /index [GET] [in c:\users\lumo\envs\flask\lib\site-packages\flask\app.py:1761]
+AttributeError: 'Flask' object has no attribute 'elasticsearch'
+2018-06-05 12:30:05,336 ERROR: Exception on /index [POST] [in c:\users\woongw~1\envs\flaskt~1\lib\site-packages\flask\app.py:1560]
 Traceback (most recent call last):
-  File "c:\users\lumo\envs\flask\lib\site-packages\flask\app.py", line 2292, in wsgi_app
+  File "c:\users\woongw~1\envs\flaskt~1\lib\site-packages\flask\app.py", line 1982, in wsgi_app
     response = self.full_dispatch_request()
-  File "c:\users\lumo\envs\flask\lib\site-packages\flask\app.py", line 1815, in full_dispatch_request
+  File "c:\users\woongw~1\envs\flaskt~1\lib\site-packages\flask\app.py", line 1614, in full_dispatch_request
     rv = self.handle_user_exception(e)
-  File "c:\users\lumo\envs\flask\lib\site-packages\flask\app.py", line 1718, in handle_user_exception
+  File "c:\users\woongw~1\envs\flaskt~1\lib\site-packages\flask\app.py", line 1517, in handle_user_exception
     reraise(exc_type, exc_value, tb)
-  File "c:\users\lumo\envs\flask\lib\site-packages\flask\_compat.py", line 35, in reraise
-    raise value
-  File "c:\users\lumo\envs\flask\lib\site-packages\flask\app.py", line 1813, in full_dispatch_request
+  File "c:\users\woongw~1\envs\flaskt~1\lib\site-packages\flask\app.py", line 1612, in full_dispatch_request
     rv = self.dispatch_request()
-  File "c:\users\lumo\envs\flask\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+  File "c:\users\woongw~1\envs\flaskt~1\lib\site-packages\flask\app.py", line 1598, in dispatch_request
     return self.view_functions[rule.endpoint](**req.view_args)
-  File "c:\users\lumo\envs\flask\lib\site-packages\flask_login\utils.py", line 261, in decorated_view
+  File "c:\users\woongw~1\envs\flaskt~1\lib\site-packages\flask_login\utils.py", line 228, in decorated_view
     return func(*args, **kwargs)
-  File "C:\Users\Lumo\Desktop\microblog\app\routes.py", line 32, in index
-    posts = current_user.followed_posts().all()
-  File "c:\users\lumo\envs\flask\lib\site-packages\werkzeug\local.py", line 347, in __getattr__
+  File "C:\Users\Woong Wen Tat\flask-microblog\app\main\routes.py", line 35, in index
+    db.session.commit()
+  File "c:\users\woongw~1\envs\flaskt~1\lib\site-packages\sqlalchemy\orm\scoping.py", line 157, in do
+    return getattr(self.registry(), name)(*args, **kwargs)
+  File "c:\users\woongw~1\envs\flaskt~1\lib\site-packages\sqlalchemy\orm\session.py", line 906, in commit
+    self.transaction.commit()
+  File "c:\users\woongw~1\envs\flaskt~1\lib\site-packages\sqlalchemy\orm\session.py", line 468, in commit
+    self.session.dispatch.after_commit(self.session)
+  File "c:\users\woongw~1\envs\flaskt~1\lib\site-packages\sqlalchemy\event\attr.py", line 218, in __call__
+    fn(*args, **kw)
+  File "C:\Users\Woong Wen Tat\flask-microblog\app\models.py", line 112, in after_commit
+    add_to_index(obj.__tablename__, obj)
+  File "C:\Users\Woong Wen Tat\flask-microblog\app\search.py", line 5, in add_to_index
+    if not current_app.elasticsearch:
+  File "c:\users\woongw~1\envs\flaskt~1\lib\site-packages\werkzeug\local.py", line 347, in __getattr__
     return getattr(self._get_current_object(), name)
-AttributeError: 'User' object has no attribute 'followed_posts'
-2018-05-29 10:35:04,003 INFO: Microblog startup [in C:\Users\Lumo\Desktop\microblog\app\__init__.py:42]
-2018-05-29 10:35:10,487 ERROR: Exception on /explore [GET] [in c:\users\lumo\envs\flask\lib\site-packages\flask\app.py:1761]
-Traceback (most recent call last):
-  File "c:\users\lumo\envs\flask\lib\site-packages\flask\app.py", line 2292, in wsgi_app
-    response = self.full_dispatch_request()
-  File "c:\users\lumo\envs\flask\lib\site-packages\flask\app.py", line 1815, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-  File "c:\users\lumo\envs\flask\lib\site-packages\flask\app.py", line 1718, in handle_user_exception
-    reraise(exc_type, exc_value, tb)
-  File "c:\users\lumo\envs\flask\lib\site-packages\flask\_compat.py", line 35, in reraise
-    raise value
-  File "c:\users\lumo\envs\flask\lib\site-packages\flask\app.py", line 1813, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "c:\users\lumo\envs\flask\lib\site-packages\flask\app.py", line 1799, in dispatch_request
-    return self.view_functions[rule.endpoint](**req.view_args)
-  File "c:\users\lumo\envs\flask\lib\site-packages\flask_login\utils.py", line 261, in decorated_view
-    return func(*args, **kwargs)
-  File "C:\Users\Lumo\Desktop\microblog\app\routes.py", line 135, in explore
-    posts = post.query.order_by(Post.timestamp.desc()).all()
-NameError: name 'post' is not defined
-2018-05-29 10:36:07,490 INFO: Microblog startup [in C:\Users\Lumo\Desktop\microblog\app\__init__.py:42]
-2018-05-29 11:36:39,783 INFO: Microblog startup [in C:\Users\Lumo\Desktop\microblog\app\__init__.py:43]
-2018-05-29 11:36:46,001 INFO: Microblog startup [in C:\Users\Lumo\Desktop\microblog\app\__init__.py:43]
-2018-05-29 11:37:20,680 INFO: Microblog startup [in C:\Users\Lumo\Desktop\microblog\app\__init__.py:45]
-2018-05-29 11:37:58,716 INFO: Microblog startup [in C:\Users\Lumo\Desktop\microblog\app\__init__.py:45]
-2018-05-29 16:51:22,864 INFO: Microblog startup [in C:\Users\Lumo\Desktop\microblog\app\__init__.py:47]
-2018-05-29 16:51:37,156 INFO: Microblog startup [in C:\Users\Lumo\Desktop\microblog\app\__init__.py:47]
+AttributeError: 'Flask' object has no attribute 'elasticsearch'

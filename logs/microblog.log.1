@@ -1,4 +1,4 @@
-2018-06-05 14:19:28,400 ERROR: Exception on /search [GET] [in c:\users\woongw~1\envs\flaskt~1\lib\site-packages\flask\app.py:1560]
+2018-06-07 14:30:09,490 ERROR: Exception on / [GET] [in c:\users\woongw~1\envs\flaskt~1\lib\site-packages\flask\app.py:1560]
 Traceback (most recent call last):
   File "c:\users\woongw~1\envs\flaskt~1\lib\site-packages\flask\app.py", line 1982, in wsgi_app
     response = self.full_dispatch_request()
@@ -12,24 +12,60 @@ Traceback (most recent call last):
     return self.view_functions[rule.endpoint](**req.view_args)
   File "c:\users\woongw~1\envs\flaskt~1\lib\site-packages\flask_login\utils.py", line 228, in decorated_view
     return func(*args, **kwargs)
-  File "C:\Users\Woong Wen Tat\flask-microblog\app\main\routes.py", line 144, in search
-    current_app.config['POSTS_PER_PAGE'])
-  File "C:\Users\Woong Wen Tat\flask-microblog\app\models.py", line 91, in search
-    ids, total = query_index(cls.__tablename__, expression, page, per_page)
-  File "C:\Users\Woong Wen Tat\flask-microblog\app\search.py", line 26, in query_index
-    'from': (page - 1) * per_page, 'size': per_page})
-  File "c:\users\woongw~1\envs\flaskt~1\lib\site-packages\elasticsearch\client\utils.py", line 76, in _wrapped
-    return func(*args, params=params, **kwargs)
-  File "c:\users\woongw~1\envs\flaskt~1\lib\site-packages\elasticsearch\client\__init__.py", line 655, in search
-    doc_type, '_search'), params=params, body=body)
-  File "c:\users\woongw~1\envs\flaskt~1\lib\site-packages\elasticsearch\transport.py", line 314, in perform_request
-    status, headers_response, data = connection.perform_request(method, url, params, body, headers=headers, ignore=ignore, timeout=timeout)
-  File "c:\users\woongw~1\envs\flaskt~1\lib\site-packages\elasticsearch\connection\http_urllib3.py", line 180, in perform_request
-    self._raise_error(response.status, raw_data)
-  File "c:\users\woongw~1\envs\flaskt~1\lib\site-packages\elasticsearch\connection\base.py", line 125, in _raise_error
-    raise HTTP_EXCEPTIONS.get(status_code, TransportError)(status_code, error_message, additional_info)
-NotFoundError: TransportError(404, u'index_not_found_exception', u'no such index')
-2018-06-05 14:19:49,338 ERROR: Exception on /search [GET] [in c:\users\woongw~1\envs\flaskt~1\lib\site-packages\flask\app.py:1560]
+  File "C:\Users\Woong Wen Tat\flask-microblog\app\main\routes.py", line 47, in index
+    prev_url=prev_url)
+  File "c:\users\woongw~1\envs\flaskt~1\lib\site-packages\flask\templating.py", line 134, in render_template
+    context, ctx.app)
+  File "c:\users\woongw~1\envs\flaskt~1\lib\site-packages\flask\templating.py", line 116, in _render
+    rv = template.render(context)
+  File "c:\users\woongw~1\envs\flaskt~1\lib\site-packages\jinja2\environment.py", line 1008, in render
+    return self.environment.handle_exception(exc_info, True)
+  File "c:\users\woongw~1\envs\flaskt~1\lib\site-packages\jinja2\environment.py", line 780, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\Woong Wen Tat\flask-microblog\app\templates\index.html", line 2, in top-level template code
+    {% import 'bootstrap/wtf.html' as wtf %}
+  File "C:\Users\Woong Wen Tat\flask-microblog\app\templates\base.html", line 1, in top-level template code
+    {% extends 'bootstrap/base.html' %}
+  File "c:\users\woongw~1\envs\flaskt~1\lib\site-packages\flask_bootstrap\templates\bootstrap\base.html", line 1, in top-level template code
+    {% block doc -%}
+  File "c:\users\woongw~1\envs\flaskt~1\lib\site-packages\flask_bootstrap\templates\bootstrap\base.html", line 4, in block "doc"
+    {%- block html %}
+  File "c:\users\woongw~1\envs\flaskt~1\lib\site-packages\flask_bootstrap\templates\bootstrap\base.html", line 20, in block "html"
+    {% block body -%}
+  File "c:\users\woongw~1\envs\flaskt~1\lib\site-packages\flask_bootstrap\templates\bootstrap\base.html", line 23, in block "body"
+    {% block content -%}
+  File "C:\Users\Woong Wen Tat\flask-microblog\app\templates\base.html", line 60, in block "content"
+    {% if current_user.is_authenticated %}
+  File "C:\Users\Woong Wen Tat\flask-microblog\app\models.py", line 106, in get_tasks_in_progress
+    return Task.query.filter_by(user=self, complete=False).all()
+  File "c:\users\woongw~1\envs\flaskt~1\lib\site-packages\sqlalchemy\orm\query.py", line 2703, in all
+    return list(self)
+  File "c:\users\woongw~1\envs\flaskt~1\lib\site-packages\sqlalchemy\orm\query.py", line 2855, in __iter__
+    return self._execute_and_instances(context)
+  File "c:\users\woongw~1\envs\flaskt~1\lib\site-packages\sqlalchemy\orm\query.py", line 2878, in _execute_and_instances
+    result = conn.execute(querycontext.statement, self._params)
+  File "c:\users\woongw~1\envs\flaskt~1\lib\site-packages\sqlalchemy\engine\base.py", line 945, in execute
+    return meth(self, multiparams, params)
+  File "c:\users\woongw~1\envs\flaskt~1\lib\site-packages\sqlalchemy\sql\elements.py", line 263, in _execute_on_connection
+    return connection._execute_clauseelement(self, multiparams, params)
+  File "c:\users\woongw~1\envs\flaskt~1\lib\site-packages\sqlalchemy\engine\base.py", line 1053, in _execute_clauseelement
+    compiled_sql, distilled_params
+  File "c:\users\woongw~1\envs\flaskt~1\lib\site-packages\sqlalchemy\engine\base.py", line 1189, in _execute_context
+    context)
+  File "c:\users\woongw~1\envs\flaskt~1\lib\site-packages\sqlalchemy\engine\base.py", line 1402, in _handle_dbapi_exception
+    exc_info
+  File "c:\users\woongw~1\envs\flaskt~1\lib\site-packages\sqlalchemy\util\compat.py", line 203, in raise_from_cause
+    reraise(type(exception), exception, tb=exc_tb, cause=cause)
+  File "c:\users\woongw~1\envs\flaskt~1\lib\site-packages\sqlalchemy\engine\base.py", line 1182, in _execute_context
+    context)
+  File "c:\users\woongw~1\envs\flaskt~1\lib\site-packages\sqlalchemy\engine\default.py", line 470, in do_execute
+    cursor.execute(statement, parameters)
+OperationalError: (sqlite3.OperationalError) no such table: task [SQL: u'SELECT task.id AS task_id, task.name AS task_name, task.description AS task_description, task.user_id AS task_user_id, task.complete AS task_complete \nFROM task \nWHERE ? = task.user_id AND task.complete = 0'] [parameters: (1,)]
+2018-06-07 14:31:22,687 INFO: Microblog startup [in C:\Users\Woong Wen Tat\flask-microblog\app\__init__.py:81]
+2018-06-07 14:31:31,904 INFO: Microblog startup [in C:\Users\Woong Wen Tat\flask-microblog\app\__init__.py:81]
+2018-06-07 14:31:38,953 INFO: Microblog startup [in C:\Users\Woong Wen Tat\flask-microblog\app\__init__.py:81]
+2018-06-07 14:55:13,329 INFO: Microblog startup [in C:\Users\Woong Wen Tat\flask-microblog\app\__init__.py:84]
+2018-06-07 14:55:17,252 ERROR: Exception on /api/users/1 [GET] [in c:\users\woongw~1\envs\flaskt~1\lib\site-packages\flask\app.py:1560]
 Traceback (most recent call last):
   File "c:\users\woongw~1\envs\flaskt~1\lib\site-packages\flask\app.py", line 1982, in wsgi_app
     response = self.full_dispatch_request()
@@ -41,27 +77,12 @@ Traceback (most recent call last):
     rv = self.dispatch_request()
   File "c:\users\woongw~1\envs\flaskt~1\lib\site-packages\flask\app.py", line 1598, in dispatch_request
     return self.view_functions[rule.endpoint](**req.view_args)
-  File "c:\users\woongw~1\envs\flaskt~1\lib\site-packages\flask_login\utils.py", line 228, in decorated_view
-    return func(*args, **kwargs)
-  File "C:\Users\Woong Wen Tat\flask-microblog\app\main\routes.py", line 144, in search
-    current_app.config['POSTS_PER_PAGE'])
-  File "C:\Users\Woong Wen Tat\flask-microblog\app\models.py", line 91, in search
-    ids, total = query_index(cls.__tablename__, expression, page, per_page)
-  File "C:\Users\Woong Wen Tat\flask-microblog\app\search.py", line 26, in query_index
-    'from': (page - 1) * per_page, 'size': per_page})
-  File "c:\users\woongw~1\envs\flaskt~1\lib\site-packages\elasticsearch\client\utils.py", line 76, in _wrapped
-    return func(*args, params=params, **kwargs)
-  File "c:\users\woongw~1\envs\flaskt~1\lib\site-packages\elasticsearch\client\__init__.py", line 655, in search
-    doc_type, '_search'), params=params, body=body)
-  File "c:\users\woongw~1\envs\flaskt~1\lib\site-packages\elasticsearch\transport.py", line 314, in perform_request
-    status, headers_response, data = connection.perform_request(method, url, params, body, headers=headers, ignore=ignore, timeout=timeout)
-  File "c:\users\woongw~1\envs\flaskt~1\lib\site-packages\elasticsearch\connection\http_urllib3.py", line 180, in perform_request
-    self._raise_error(response.status, raw_data)
-  File "c:\users\woongw~1\envs\flaskt~1\lib\site-packages\elasticsearch\connection\base.py", line 125, in _raise_error
-    raise HTTP_EXCEPTIONS.get(status_code, TransportError)(status_code, error_message, additional_info)
-NotFoundError: TransportError(404, u'index_not_found_exception', u'no such index')
-2018-06-05 14:20:00,744 INFO: Microblog startup [in C:\Users\Woong Wen Tat\flask-microblog\app\__init__.py:76]
-2018-06-05 14:20:38,203 ERROR: Exception on /search [GET] [in c:\users\woongw~1\envs\flaskt~1\lib\site-packages\flask\app.py:1560]
+  File "C:\Users\Woong Wen Tat\flask-microblog\app\api\users.py", line 7, in get_user
+    return jsonify(User.query.get_or_404(id).to_dict())
+NameError: global name 'User' is not defined
+2018-06-07 15:04:22,102 INFO: Microblog startup [in C:\Users\Woong Wen Tat\flask-microblog\app\__init__.py:84]
+2018-06-07 15:08:47,927 INFO: Microblog startup [in C:\Users\Woong Wen Tat\flask-microblog\app\__init__.py:84]
+2018-06-07 15:08:51,665 ERROR: Exception on /api/users [GET] [in c:\users\woongw~1\envs\flaskt~1\lib\site-packages\flask\app.py:1560]
 Traceback (most recent call last):
   File "c:\users\woongw~1\envs\flaskt~1\lib\site-packages\flask\app.py", line 1982, in wsgi_app
     response = self.full_dispatch_request()
@@ -73,32 +94,10 @@ Traceback (most recent call last):
     rv = self.dispatch_request()
   File "c:\users\woongw~1\envs\flaskt~1\lib\site-packages\flask\app.py", line 1598, in dispatch_request
     return self.view_functions[rule.endpoint](**req.view_args)
-  File "c:\users\woongw~1\envs\flaskt~1\lib\site-packages\flask_login\utils.py", line 228, in decorated_view
-    return func(*args, **kwargs)
-  File "C:\Users\Woong Wen Tat\flask-microblog\app\main\routes.py", line 144, in search
-    current_app.config['POSTS_PER_PAGE'])
-  File "C:\Users\Woong Wen Tat\flask-microblog\app\models.py", line 91, in search
-    ids, total = query_index(cls.__tablename__, expression, page, per_page)
-  File "C:\Users\Woong Wen Tat\flask-microblog\app\search.py", line 28, in query_index
-    return ids, search['hits']['totals']
-KeyError: 'totals'
-2018-06-05 14:21:57,006 INFO: Microblog startup [in C:\Users\Woong Wen Tat\flask-microblog\app\__init__.py:76]
-2018-06-05 14:27:13,516 INFO: Microblog startup [in C:\Users\Woong Wen Tat\flask-microblog\app\__init__.py:76]
-2018-06-05 17:12:16,404 INFO: Microblog startup [in C:\Users\Woong Wen Tat\flask-microblog\app\__init__.py:76]
-2018-06-05 17:27:26,637 INFO: Microblog startup [in C:\Users\Woong Wen Tat\flask-microblog\app\__init__.py:76]
-2018-06-05 17:29:42,756 INFO: Microblog startup [in C:\Users\Woong Wen Tat\flask-microblog\app\__init__.py:76]
-2018-06-05 17:42:30,453 INFO: Microblog startup [in C:\Users\Woong Wen Tat\flask-microblog\app\__init__.py:76]
-2018-06-05 17:42:42,306 INFO: Microblog startup [in C:\Users\Woong Wen Tat\flask-microblog\app\__init__.py:76]
-2018-06-05 17:47:06,203 INFO: Microblog startup [in C:\Users\Woong Wen Tat\flask-microblog\app\__init__.py:76]
-2018-06-05 17:47:28,428 INFO: Microblog startup [in C:\Users\Woong Wen Tat\flask-microblog\app\__init__.py:76]
-2018-06-05 17:47:48,430 INFO: Microblog startup [in C:\Users\Woong Wen Tat\flask-microblog\app\__init__.py:76]
-2018-06-05 17:48:22,138 INFO: Microblog startup [in C:\Users\Woong Wen Tat\flask-microblog\app\__init__.py:76]
-2018-06-06 17:12:34,252 INFO: Microblog startup [in C:\Users\Woong Wen Tat\flask-microblog\app\__init__.py:81]
-2018-06-06 17:12:42,499 INFO: Microblog startup [in C:\Users\Woong Wen Tat\flask-microblog\app\__init__.py:81]
-2018-06-06 17:12:46,588 INFO: Microblog startup [in C:\Users\Woong Wen Tat\flask-microblog\app\__init__.py:81]
-2018-06-06 17:12:51,885 INFO: Microblog startup [in C:\Users\Woong Wen Tat\flask-microblog\app\__init__.py:81]
-2018-06-06 17:19:49,851 INFO: Microblog startup [in C:\Users\Woong Wen Tat\flask-microblog\app\__init__.py:81]
-2018-06-06 17:20:36,190 ERROR: Exception on /messages [GET] [in c:\users\woongw~1\envs\flaskt~1\lib\site-packages\flask\app.py:1560]
+  File "C:\Users\Woong Wen Tat\flask-microblog\app\api\users.py", line 13, in get_users
+    page = request.args.get('page', 1, type=int)
+NameError: global name 'request' is not defined
+2018-06-07 15:09:21,081 ERROR: Exception on /api/users [GET] [in c:\users\woongw~1\envs\flaskt~1\lib\site-packages\flask\app.py:1560]
 Traceback (most recent call last):
   File "c:\users\woongw~1\envs\flaskt~1\lib\site-packages\flask\app.py", line 1982, in wsgi_app
     response = self.full_dispatch_request()
@@ -110,8 +109,21 @@ Traceback (most recent call last):
     rv = self.dispatch_request()
   File "c:\users\woongw~1\envs\flaskt~1\lib\site-packages\flask\app.py", line 1598, in dispatch_request
     return self.view_functions[rule.endpoint](**req.view_args)
-  File "c:\users\woongw~1\envs\flaskt~1\lib\site-packages\flask_login\utils.py", line 228, in decorated_view
-    return func(*args, **kwargs)
-  File "C:\Users\Woong Wen Tat\flask-microblog\app\main\routes.py", line 180, in messages
-    user.add_notification('unread_message_count', user.new_messages())
-AttributeError: 'function' object has no attribute 'add_notification'
+  File "C:\Users\Woong Wen Tat\flask-microblog\app\api\users.py", line 13, in get_users
+    page = request.args.get('page', 1, type=int)
+NameError: global name 'request' is not defined
+2018-06-07 15:09:46,259 ERROR: Exception on /api/users [GET] [in c:\users\woongw~1\envs\flaskt~1\lib\site-packages\flask\app.py:1560]
+Traceback (most recent call last):
+  File "c:\users\woongw~1\envs\flaskt~1\lib\site-packages\flask\app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "c:\users\woongw~1\envs\flaskt~1\lib\site-packages\flask\app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "c:\users\woongw~1\envs\flaskt~1\lib\site-packages\flask\app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "c:\users\woongw~1\envs\flaskt~1\lib\site-packages\flask\app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\users\woongw~1\envs\flaskt~1\lib\site-packages\flask\app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\Woong Wen Tat\flask-microblog\app\api\users.py", line 13, in get_users
+    page = request.args.get('page', 1, type=int)
+NameError: global name 'request' is not defined

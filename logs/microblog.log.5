@@ -1,94 +1,4 @@
-2018-06-02 10:03:14,757 ERROR: Exception on /translate [POST] [in c:\users\lumo\envs\flask\lib\site-packages\flask\app.py:1761]
-Traceback (most recent call last):
-  File "c:\users\lumo\envs\flask\lib\site-packages\flask\app.py", line 2292, in wsgi_app
-    response = self.full_dispatch_request()
-  File "c:\users\lumo\envs\flask\lib\site-packages\flask\app.py", line 1815, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-  File "c:\users\lumo\envs\flask\lib\site-packages\flask\app.py", line 1718, in handle_user_exception
-    reraise(exc_type, exc_value, tb)
-  File "c:\users\lumo\envs\flask\lib\site-packages\flask\_compat.py", line 35, in reraise
-    raise value
-  File "c:\users\lumo\envs\flask\lib\site-packages\flask\app.py", line 1813, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "c:\users\lumo\envs\flask\lib\site-packages\flask\app.py", line 1799, in dispatch_request
-    return self.view_functions[rule.endpoint](**req.view_args)
-  File "c:\users\lumo\envs\flask\lib\site-packages\flask_login\utils.py", line 261, in decorated_view
-    return func(*args, **kwargs)
-  File "C:\Users\Lumo\Desktop\microblog\app\routes.py", line 205, in translate_text
-    request.form['dest_language'])})
-  File "C:\Users\Lumo\Desktop\microblog\app\translate.py", line 15, in translate
-    print (r.content.text.decode('utf-8-sig').text)
-AttributeError: 'bytes' object has no attribute 'text'
-2018-06-02 10:03:40,079 INFO: Microblog startup [in C:\Users\Lumo\Desktop\microblog\app\__init__.py:52]
-2018-06-02 10:04:03,604 INFO: Microblog startup [in C:\Users\Lumo\Desktop\microblog\app\__init__.py:52]
-2018-06-02 10:04:08,825 ERROR: Exception on /translate [POST] [in c:\users\lumo\envs\flask\lib\site-packages\flask\app.py:1761]
-Traceback (most recent call last):
-  File "c:\users\lumo\envs\flask\lib\site-packages\flask\app.py", line 2292, in wsgi_app
-    response = self.full_dispatch_request()
-  File "c:\users\lumo\envs\flask\lib\site-packages\flask\app.py", line 1815, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-  File "c:\users\lumo\envs\flask\lib\site-packages\flask\app.py", line 1718, in handle_user_exception
-    reraise(exc_type, exc_value, tb)
-  File "c:\users\lumo\envs\flask\lib\site-packages\flask\_compat.py", line 35, in reraise
-    raise value
-  File "c:\users\lumo\envs\flask\lib\site-packages\flask\app.py", line 1813, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "c:\users\lumo\envs\flask\lib\site-packages\flask\app.py", line 1799, in dispatch_request
-    return self.view_functions[rule.endpoint](**req.view_args)
-  File "c:\users\lumo\envs\flask\lib\site-packages\flask_login\utils.py", line 261, in decorated_view
-    return func(*args, **kwargs)
-  File "C:\Users\Lumo\Desktop\microblog\app\routes.py", line 205, in translate_text
-    request.form['dest_language'])})
-  File "C:\Users\Lumo\Desktop\microblog\app\translate.py", line 15, in translate
-    print (r.content.decode('utf-8-sig').text)
-AttributeError: 'str' object has no attribute 'text'
-2018-06-02 10:04:41,456 INFO: Microblog startup [in C:\Users\Lumo\Desktop\microblog\app\__init__.py:52]
-2018-06-02 10:07:34,834 INFO: Microblog startup [in C:\Users\Lumo\Desktop\microblog\app\__init__.py:52]
-2018-06-02 10:07:42,034 ERROR: Exception on /translate [POST] [in c:\users\lumo\envs\flask\lib\site-packages\flask\app.py:1761]
-Traceback (most recent call last):
-  File "c:\users\lumo\envs\flask\lib\site-packages\flask\app.py", line 2292, in wsgi_app
-    response = self.full_dispatch_request()
-  File "c:\users\lumo\envs\flask\lib\site-packages\flask\app.py", line 1815, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-  File "c:\users\lumo\envs\flask\lib\site-packages\flask\app.py", line 1718, in handle_user_exception
-    reraise(exc_type, exc_value, tb)
-  File "c:\users\lumo\envs\flask\lib\site-packages\flask\_compat.py", line 35, in reraise
-    raise value
-  File "c:\users\lumo\envs\flask\lib\site-packages\flask\app.py", line 1813, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "c:\users\lumo\envs\flask\lib\site-packages\flask\app.py", line 1799, in dispatch_request
-    return self.view_functions[rule.endpoint](**req.view_args)
-  File "c:\users\lumo\envs\flask\lib\site-packages\flask_login\utils.py", line 261, in decorated_view
-    return func(*args, **kwargs)
-  File "C:\Users\Lumo\Desktop\microblog\app\routes.py", line 205, in translate_text
-    request.form['dest_language'])})
-  File "C:\Users\Lumo\Desktop\microblog\app\translate.py", line 15, in translate
-    print (json.loads(r.content.decode('utf-8-sig')).text)
-AttributeError: 'dict' object has no attribute 'text'
-2018-06-02 10:08:05,321 INFO: Microblog startup [in C:\Users\Lumo\Desktop\microblog\app\__init__.py:52]
-2018-06-02 10:08:36,974 INFO: Microblog startup [in C:\Users\Lumo\Desktop\microblog\app\__init__.py:52]
-2018-06-02 10:09:09,011 INFO: Microblog startup [in C:\Users\Lumo\Desktop\microblog\app\__init__.py:52]
-2018-06-02 10:09:56,496 INFO: Microblog startup [in C:\Users\Lumo\Desktop\microblog\app\__init__.py:52]
-2018-06-02 10:10:53,684 INFO: Microblog startup [in C:\Users\Lumo\Desktop\microblog\app\__init__.py:52]
-2018-06-02 10:17:34,081 INFO: Microblog startup [in C:\Users\Lumo\Desktop\microblog\app\__init__.py:52]
-2018-06-02 10:18:38,918 INFO: Microblog startup [in C:\Users\Lumo\Desktop\microblog\app\__init__.py:52]
-2018-06-02 10:18:58,341 INFO: Microblog startup [in C:\Users\Lumo\Desktop\microblog\app\__init__.py:52]
-2018-06-02 10:20:51,719 INFO: Microblog startup [in C:\Users\Lumo\Desktop\microblog\app\__init__.py:52]
-2018-06-02 10:21:24,597 INFO: Microblog startup [in C:\Users\Lumo\Desktop\microblog\app\__init__.py:52]
-2018-06-02 10:24:49,128 INFO: Microblog startup [in C:\Users\Lumo\Desktop\microblog\app\__init__.py:52]
-2018-06-03 12:31:45,555 INFO: Microblog startup [in C:\Users\Lumo\Desktop\microblog\app\__init__.py:74]
-2018-06-03 12:43:27,281 INFO: Microblog startup [in C:\Users\Lumo\Desktop\microblog\app\__init__.py:74]
-2018-06-03 12:44:31,848 INFO: Microblog startup [in C:\Users\Lumo\Desktop\microblog\app\__init__.py:74]
-2018-06-03 12:46:10,258 INFO: Microblog startup [in C:\Users\Lumo\Desktop\microblog\app\__init__.py:74]
-2018-06-03 12:47:02,287 INFO: Microblog startup [in C:\Users\Lumo\Desktop\microblog\app\__init__.py:74]
-2018-06-03 12:53:59,624 INFO: Microblog startup [in C:\Users\Lumo\Desktop\microblog\app\__init__.py:74]
-2018-06-03 14:58:56,363 INFO: Microblog startup [in C:\Users\Lumo\Desktop\microblog\app\__init__.py:74]
-2018-06-03 15:02:04,227 INFO: Microblog startup [in C:\Users\Lumo\Desktop\microblog\app\__init__.py:74]
-2018-06-03 15:02:25,646 INFO: Microblog startup [in C:\Users\Lumo\Desktop\microblog\app\__init__.py:74]
-2018-06-03 15:03:01,121 INFO: Microblog startup [in C:\Users\Lumo\Desktop\microblog\app\__init__.py:74]
-2018-06-03 15:03:13,882 INFO: Microblog startup [in C:\Users\Lumo\Desktop\microblog\app\__init__.py:74]
-2018-06-05 12:25:39,983 INFO: Microblog startup [in C:\Users\Woong Wen Tat\flask-microblog\app\__init__.py:74]
-2018-06-05 12:26:23,480 ERROR: Exception on /search [GET] [in c:\users\woongw~1\envs\flaskt~1\lib\site-packages\flask\app.py:1560]
+2018-06-05 12:45:43,061 ERROR: Exception on /search [GET] [in c:\users\woongw~1\envs\flaskt~1\lib\site-packages\flask\app.py:1560]
 Traceback (most recent call last):
   File "c:\users\woongw~1\envs\flaskt~1\lib\site-packages\flask\app.py", line 1982, in wsgi_app
     response = self.full_dispatch_request()
@@ -111,3 +21,86 @@ Traceback (most recent call last):
   File "c:\users\woongw~1\envs\flaskt~1\lib\site-packages\werkzeug\local.py", line 347, in __getattr__
     return getattr(self._get_current_object(), name)
 AttributeError: 'Flask' object has no attribute 'elasticsearch'
+2018-06-05 12:46:45,588 ERROR: Exception on /search [GET] [in c:\users\woongw~1\envs\flaskt~1\lib\site-packages\flask\app.py:1560]
+Traceback (most recent call last):
+  File "c:\users\woongw~1\envs\flaskt~1\lib\site-packages\flask\app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "c:\users\woongw~1\envs\flaskt~1\lib\site-packages\flask\app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "c:\users\woongw~1\envs\flaskt~1\lib\site-packages\flask\app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "c:\users\woongw~1\envs\flaskt~1\lib\site-packages\flask\app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\users\woongw~1\envs\flaskt~1\lib\site-packages\flask\app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "c:\users\woongw~1\envs\flaskt~1\lib\site-packages\flask_login\utils.py", line 228, in decorated_view
+    return func(*args, **kwargs)
+  File "C:\Users\Woong Wen Tat\flask-microblog\app\main\routes.py", line 144, in search
+    current_app.config['POSTS_PER_PAGE'])
+  File "C:\Users\Woong Wen Tat\flask-microblog\app\models.py", line 91, in search
+    ids, total = query_index(cls.__tablename__, expression, page, per_page)
+  File "C:\Users\Woong Wen Tat\flask-microblog\app\search.py", line 21, in query_index
+    if not current_app.elasticsearch:
+  File "c:\users\woongw~1\envs\flaskt~1\lib\site-packages\werkzeug\local.py", line 347, in __getattr__
+    return getattr(self._get_current_object(), name)
+AttributeError: 'Flask' object has no attribute 'elasticsearch'
+2018-06-05 12:49:22,358 INFO: Microblog startup [in C:\Users\Woong Wen Tat\flask-microblog\app\__init__.py:76]
+2018-06-05 12:49:41,121 ERROR: Exception on /search [GET] [in c:\users\woongw~1\envs\flaskt~1\lib\site-packages\flask\app.py:1560]
+Traceback (most recent call last):
+  File "c:\users\woongw~1\envs\flaskt~1\lib\site-packages\flask\app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "c:\users\woongw~1\envs\flaskt~1\lib\site-packages\flask\app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "c:\users\woongw~1\envs\flaskt~1\lib\site-packages\flask\app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "c:\users\woongw~1\envs\flaskt~1\lib\site-packages\flask\app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\users\woongw~1\envs\flaskt~1\lib\site-packages\flask\app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "c:\users\woongw~1\envs\flaskt~1\lib\site-packages\flask_login\utils.py", line 228, in decorated_view
+    return func(*args, **kwargs)
+  File "C:\Users\Woong Wen Tat\flask-microblog\app\main\routes.py", line 144, in search
+    current_app.config['POSTS_PER_PAGE'])
+  File "C:\Users\Woong Wen Tat\flask-microblog\app\models.py", line 91, in search
+    ids, total = query_index(cls.__tablename__, expression, page, per_page)
+  File "C:\Users\Woong Wen Tat\flask-microblog\app\search.py", line 26, in query_index
+    'from': (page - 1) * per_page, 'size': per_page})
+  File "c:\users\woongw~1\envs\flaskt~1\lib\site-packages\elasticsearch\client\utils.py", line 76, in _wrapped
+    return func(*args, params=params, **kwargs)
+  File "c:\users\woongw~1\envs\flaskt~1\lib\site-packages\elasticsearch\client\__init__.py", line 655, in search
+    doc_type, '_search'), params=params, body=body)
+  File "c:\users\woongw~1\envs\flaskt~1\lib\site-packages\elasticsearch\transport.py", line 314, in perform_request
+    status, headers_response, data = connection.perform_request(method, url, params, body, headers=headers, ignore=ignore, timeout=timeout)
+  File "c:\users\woongw~1\envs\flaskt~1\lib\site-packages\elasticsearch\connection\http_urllib3.py", line 175, in perform_request
+    raise ConnectionError('N/A', str(e), e)
+ConnectionError: ConnectionError(<urllib3.connection.HTTPConnection object at 0x0532F390>: Failed to establish a new connection: [Errno 10061] No connection could be made because the target machine actively refused it) caused by: NewConnectionError(<urllib3.connection.HTTPConnection object at 0x0532F390>: Failed to establish a new connection: [Errno 10061] No connection could be made because the target machine actively refused it)
+2018-06-05 12:50:42,165 INFO: Microblog startup [in C:\Users\Woong Wen Tat\flask-microblog\app\__init__.py:76]
+2018-06-05 12:50:55,609 ERROR: Exception on /search [GET] [in c:\users\woongw~1\envs\flaskt~1\lib\site-packages\flask\app.py:1560]
+Traceback (most recent call last):
+  File "c:\users\woongw~1\envs\flaskt~1\lib\site-packages\flask\app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "c:\users\woongw~1\envs\flaskt~1\lib\site-packages\flask\app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "c:\users\woongw~1\envs\flaskt~1\lib\site-packages\flask\app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "c:\users\woongw~1\envs\flaskt~1\lib\site-packages\flask\app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\users\woongw~1\envs\flaskt~1\lib\site-packages\flask\app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "c:\users\woongw~1\envs\flaskt~1\lib\site-packages\flask_login\utils.py", line 228, in decorated_view
+    return func(*args, **kwargs)
+  File "C:\Users\Woong Wen Tat\flask-microblog\app\main\routes.py", line 144, in search
+    current_app.config['POSTS_PER_PAGE'])
+  File "C:\Users\Woong Wen Tat\flask-microblog\app\models.py", line 91, in search
+    ids, total = query_index(cls.__tablename__, expression, page, per_page)
+  File "C:\Users\Woong Wen Tat\flask-microblog\app\search.py", line 26, in query_index
+    'from': (page - 1) * per_page, 'size': per_page})
+  File "c:\users\woongw~1\envs\flaskt~1\lib\site-packages\elasticsearch\client\utils.py", line 76, in _wrapped
+    return func(*args, params=params, **kwargs)
+  File "c:\users\woongw~1\envs\flaskt~1\lib\site-packages\elasticsearch\client\__init__.py", line 655, in search
+    doc_type, '_search'), params=params, body=body)
+  File "c:\users\woongw~1\envs\flaskt~1\lib\site-packages\elasticsearch\transport.py", line 314, in perform_request
+    status, headers_response, data = connection.perform_request(method, url, params, body, headers=headers, ignore=ignore, timeout=timeout)
+  File "c:\users\woongw~1\envs\flaskt~1\lib\site-packages\elasticsearch\connection\http_urllib3.py", line 175, in perform_request
+    raise ConnectionError('N/A', str(e), e)
+ConnectionError: ConnectionError(<urllib3.connection.HTTPConnection object at 0x052FC130>: Failed to establish a new connection: [Errno 10061] No connection could be made because the target machine actively refused it) caused by: NewConnectionError(<urllib3.connection.HTTPConnection object at 0x052FC130>: Failed to establish a new connection: [Errno 10061] No connection could be made because the target machine actively refused it)

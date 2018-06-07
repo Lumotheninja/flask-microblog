@@ -177,7 +177,8 @@ def send_message(recipient):
 @login_required
 def messages():
     current_user.last_message_read_time = datetime.utcnow()
-    user.add_notification('unread_message_count', user.new_messages())
+    current_user.add_notification(
+        'unread_message_count', current_user.new_messages())
     db.session.commit()
     page = request.args.get('page', 1, type=int)
     messages = current_user.messages_received.order_by(Message.timestamp.desc(
@@ -201,3 +202,14 @@ def notifications():
         'data': n.get_data(),
         'timestamp': n.timestamp
     } for n in notifications])
+
+
+@bp.route('/export_posts')
+@login_required
+def export_posts():
+    if current_user.get_task_in_progress('export_posts'):
+        flash(_('An export task is currently in progress'))
+    else:
+        current_user.launch_task('export_posts', _('Exporting posts...'))
+        db.session.commit()
+    return redirect(url_for('main.user', username=current_user.username))

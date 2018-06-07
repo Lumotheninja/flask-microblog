@@ -1,4 +1,4 @@
-2018-06-05 12:40:27,486 ERROR: Exception on / [POST] [in c:\users\woongw~1\envs\flaskt~1\lib\site-packages\flask\app.py:1560]
+2018-06-06 17:20:38,371 ERROR: Exception on /messages [GET] [in c:\users\woongw~1\envs\flaskt~1\lib\site-packages\flask\app.py:1560]
 Traceback (most recent call last):
   File "c:\users\woongw~1\envs\flaskt~1\lib\site-packages\flask\app.py", line 1982, in wsgi_app
     response = self.full_dispatch_request()
@@ -12,24 +12,10 @@ Traceback (most recent call last):
     return self.view_functions[rule.endpoint](**req.view_args)
   File "c:\users\woongw~1\envs\flaskt~1\lib\site-packages\flask_login\utils.py", line 228, in decorated_view
     return func(*args, **kwargs)
-  File "C:\Users\Woong Wen Tat\flask-microblog\app\main\routes.py", line 35, in index
-    db.session.commit()
-  File "c:\users\woongw~1\envs\flaskt~1\lib\site-packages\sqlalchemy\orm\scoping.py", line 157, in do
-    return getattr(self.registry(), name)(*args, **kwargs)
-  File "c:\users\woongw~1\envs\flaskt~1\lib\site-packages\sqlalchemy\orm\session.py", line 906, in commit
-    self.transaction.commit()
-  File "c:\users\woongw~1\envs\flaskt~1\lib\site-packages\sqlalchemy\orm\session.py", line 468, in commit
-    self.session.dispatch.after_commit(self.session)
-  File "c:\users\woongw~1\envs\flaskt~1\lib\site-packages\sqlalchemy\event\attr.py", line 218, in __call__
-    fn(*args, **kw)
-  File "C:\Users\Woong Wen Tat\flask-microblog\app\models.py", line 112, in after_commit
-    add_to_index(obj.__tablename__, obj)
-  File "C:\Users\Woong Wen Tat\flask-microblog\app\search.py", line 5, in add_to_index
-    if not current_app.elasticsearch:
-  File "c:\users\woongw~1\envs\flaskt~1\lib\site-packages\werkzeug\local.py", line 347, in __getattr__
-    return getattr(self._get_current_object(), name)
-AttributeError: 'Flask' object has no attribute 'elasticsearch'
-2018-06-05 12:40:38,436 ERROR: Exception on /search [GET] [in c:\users\woongw~1\envs\flaskt~1\lib\site-packages\flask\app.py:1560]
+  File "C:\Users\Woong Wen Tat\flask-microblog\app\main\routes.py", line 180, in messages
+    user.add_notification('unread_message_count', user.new_messages())
+AttributeError: 'function' object has no attribute 'add_notification'
+2018-06-06 17:20:40,706 ERROR: Exception on /messages [GET] [in c:\users\woongw~1\envs\flaskt~1\lib\site-packages\flask\app.py:1560]
 Traceback (most recent call last):
   File "c:\users\woongw~1\envs\flaskt~1\lib\site-packages\flask\app.py", line 1982, in wsgi_app
     response = self.full_dispatch_request()
@@ -43,16 +29,10 @@ Traceback (most recent call last):
     return self.view_functions[rule.endpoint](**req.view_args)
   File "c:\users\woongw~1\envs\flaskt~1\lib\site-packages\flask_login\utils.py", line 228, in decorated_view
     return func(*args, **kwargs)
-  File "C:\Users\Woong Wen Tat\flask-microblog\app\main\routes.py", line 144, in search
-    current_app.config['POSTS_PER_PAGE'])
-  File "C:\Users\Woong Wen Tat\flask-microblog\app\models.py", line 91, in search
-    ids, total = query_index(cls.__tablename__, expression, page, per_page)
-  File "C:\Users\Woong Wen Tat\flask-microblog\app\search.py", line 21, in query_index
-    if not current_app.elasticsearch:
-  File "c:\users\woongw~1\envs\flaskt~1\lib\site-packages\werkzeug\local.py", line 347, in __getattr__
-    return getattr(self._get_current_object(), name)
-AttributeError: 'Flask' object has no attribute 'elasticsearch'
-2018-06-05 12:41:38,039 ERROR: Exception on /search [GET] [in c:\users\woongw~1\envs\flaskt~1\lib\site-packages\flask\app.py:1560]
+  File "C:\Users\Woong Wen Tat\flask-microblog\app\main\routes.py", line 180, in messages
+    user.add_notification('unread_message_count', user.new_messages())
+AttributeError: 'function' object has no attribute 'add_notification'
+2018-06-06 17:20:42,851 ERROR: Exception on /messages [GET] [in c:\users\woongw~1\envs\flaskt~1\lib\site-packages\flask\app.py:1560]
 Traceback (most recent call last):
   File "c:\users\woongw~1\envs\flaskt~1\lib\site-packages\flask\app.py", line 1982, in wsgi_app
     response = self.full_dispatch_request()
@@ -66,16 +46,10 @@ Traceback (most recent call last):
     return self.view_functions[rule.endpoint](**req.view_args)
   File "c:\users\woongw~1\envs\flaskt~1\lib\site-packages\flask_login\utils.py", line 228, in decorated_view
     return func(*args, **kwargs)
-  File "C:\Users\Woong Wen Tat\flask-microblog\app\main\routes.py", line 144, in search
-    current_app.config['POSTS_PER_PAGE'])
-  File "C:\Users\Woong Wen Tat\flask-microblog\app\models.py", line 91, in search
-    ids, total = query_index(cls.__tablename__, expression, page, per_page)
-  File "C:\Users\Woong Wen Tat\flask-microblog\app\search.py", line 21, in query_index
-    if not current_app.elasticsearch:
-  File "c:\users\woongw~1\envs\flaskt~1\lib\site-packages\werkzeug\local.py", line 347, in __getattr__
-    return getattr(self._get_current_object(), name)
-AttributeError: 'Flask' object has no attribute 'elasticsearch'
-2018-06-05 12:43:30,778 ERROR: Exception on /search [GET] [in c:\users\woongw~1\envs\flaskt~1\lib\site-packages\flask\app.py:1560]
+  File "C:\Users\Woong Wen Tat\flask-microblog\app\main\routes.py", line 180, in messages
+    user.add_notification('unread_message_count', user.new_messages())
+AttributeError: 'function' object has no attribute 'add_notification'
+2018-06-06 17:21:48,565 ERROR: Exception on /messages [GET] [in c:\users\woongw~1\envs\flaskt~1\lib\site-packages\flask\app.py:1560]
 Traceback (most recent call last):
   File "c:\users\woongw~1\envs\flaskt~1\lib\site-packages\flask\app.py", line 1982, in wsgi_app
     response = self.full_dispatch_request()
@@ -89,16 +63,10 @@ Traceback (most recent call last):
     return self.view_functions[rule.endpoint](**req.view_args)
   File "c:\users\woongw~1\envs\flaskt~1\lib\site-packages\flask_login\utils.py", line 228, in decorated_view
     return func(*args, **kwargs)
-  File "C:\Users\Woong Wen Tat\flask-microblog\app\main\routes.py", line 144, in search
-    current_app.config['POSTS_PER_PAGE'])
-  File "C:\Users\Woong Wen Tat\flask-microblog\app\models.py", line 91, in search
-    ids, total = query_index(cls.__tablename__, expression, page, per_page)
-  File "C:\Users\Woong Wen Tat\flask-microblog\app\search.py", line 21, in query_index
-    if not current_app.elasticsearch:
-  File "c:\users\woongw~1\envs\flaskt~1\lib\site-packages\werkzeug\local.py", line 347, in __getattr__
-    return getattr(self._get_current_object(), name)
-AttributeError: 'Flask' object has no attribute 'elasticsearch'
-2018-06-05 12:45:34,226 ERROR: Exception on /search [GET] [in c:\users\woongw~1\envs\flaskt~1\lib\site-packages\flask\app.py:1560]
+  File "C:\Users\Woong Wen Tat\flask-microblog\app\main\routes.py", line 180, in messages
+    user.add_notification('unread_message_count', user.new_messages())
+AttributeError: 'function' object has no attribute 'add_notification'
+2018-06-06 17:23:58,094 ERROR: Exception on /messages [GET] [in c:\users\woongw~1\envs\flaskt~1\lib\site-packages\flask\app.py:1560]
 Traceback (most recent call last):
   File "c:\users\woongw~1\envs\flaskt~1\lib\site-packages\flask\app.py", line 1982, in wsgi_app
     response = self.full_dispatch_request()
@@ -112,12 +80,42 @@ Traceback (most recent call last):
     return self.view_functions[rule.endpoint](**req.view_args)
   File "c:\users\woongw~1\envs\flaskt~1\lib\site-packages\flask_login\utils.py", line 228, in decorated_view
     return func(*args, **kwargs)
-  File "C:\Users\Woong Wen Tat\flask-microblog\app\main\routes.py", line 144, in search
-    current_app.config['POSTS_PER_PAGE'])
-  File "C:\Users\Woong Wen Tat\flask-microblog\app\models.py", line 91, in search
-    ids, total = query_index(cls.__tablename__, expression, page, per_page)
-  File "C:\Users\Woong Wen Tat\flask-microblog\app\search.py", line 21, in query_index
-    if not current_app.elasticsearch:
-  File "c:\users\woongw~1\envs\flaskt~1\lib\site-packages\werkzeug\local.py", line 347, in __getattr__
-    return getattr(self._get_current_object(), name)
-AttributeError: 'Flask' object has no attribute 'elasticsearch'
+  File "C:\Users\Woong Wen Tat\flask-microblog\app\main\routes.py", line 180, in messages
+    user.add_notification('unread_message_count', user.new_messages())
+AttributeError: 'function' object has no attribute 'add_notification'
+2018-06-07 11:03:01,061 INFO: Microblog startup [in C:\Users\Woong Wen Tat\flask-microblog\app\__init__.py:81]
+2018-06-07 12:07:16,505 ERROR: Exception on /messages [GET] [in c:\users\woongw~1\envs\flaskt~1\lib\site-packages\flask\app.py:1560]
+Traceback (most recent call last):
+  File "c:\users\woongw~1\envs\flaskt~1\lib\site-packages\flask\app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "c:\users\woongw~1\envs\flaskt~1\lib\site-packages\flask\app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "c:\users\woongw~1\envs\flaskt~1\lib\site-packages\flask\app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "c:\users\woongw~1\envs\flaskt~1\lib\site-packages\flask\app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\users\woongw~1\envs\flaskt~1\lib\site-packages\flask\app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "c:\users\woongw~1\envs\flaskt~1\lib\site-packages\flask_login\utils.py", line 228, in decorated_view
+    return func(*args, **kwargs)
+  File "C:\Users\Woong Wen Tat\flask-microblog\app\main\routes.py", line 180, in messages
+    user.add_notification('unread_message_count', user.new_messages())
+AttributeError: 'function' object has no attribute 'add_notification'
+2018-06-07 12:07:19,056 ERROR: Exception on /messages [GET] [in c:\users\woongw~1\envs\flaskt~1\lib\site-packages\flask\app.py:1560]
+Traceback (most recent call last):
+  File "c:\users\woongw~1\envs\flaskt~1\lib\site-packages\flask\app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "c:\users\woongw~1\envs\flaskt~1\lib\site-packages\flask\app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "c:\users\woongw~1\envs\flaskt~1\lib\site-packages\flask\app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "c:\users\woongw~1\envs\flaskt~1\lib\site-packages\flask\app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\users\woongw~1\envs\flaskt~1\lib\site-packages\flask\app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "c:\users\woongw~1\envs\flaskt~1\lib\site-packages\flask_login\utils.py", line 228, in decorated_view
+    return func(*args, **kwargs)
+  File "C:\Users\Woong Wen Tat\flask-microblog\app\main\routes.py", line 180, in messages
+    user.add_notification('unread_message_count', user.new_messages())
+AttributeError: 'function' object has no attribute 'add_notification'
+2018-06-07 12:23:08,446 INFO: Microblog startup [in C:\Users\Woong Wen Tat\flask-microblog\app\__init__.py:81]

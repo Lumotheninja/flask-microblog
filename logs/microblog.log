@@ -1,4 +1,4 @@
-2018-06-06 17:20:38,371 ERROR: Exception on /messages [GET] [in c:\users\woongw~1\envs\flaskt~1\lib\site-packages\flask\app.py:1560]
+2018-06-07 15:10:34,174 ERROR: Exception on /api/users [GET] [in c:\users\woongw~1\envs\flaskt~1\lib\site-packages\flask\app.py:1560]
 Traceback (most recent call last):
   File "c:\users\woongw~1\envs\flaskt~1\lib\site-packages\flask\app.py", line 1982, in wsgi_app
     response = self.full_dispatch_request()
@@ -10,76 +10,9 @@ Traceback (most recent call last):
     rv = self.dispatch_request()
   File "c:\users\woongw~1\envs\flaskt~1\lib\site-packages\flask\app.py", line 1598, in dispatch_request
     return self.view_functions[rule.endpoint](**req.view_args)
-  File "c:\users\woongw~1\envs\flaskt~1\lib\site-packages\flask_login\utils.py", line 228, in decorated_view
-    return func(*args, **kwargs)
-  File "C:\Users\Woong Wen Tat\flask-microblog\app\main\routes.py", line 180, in messages
-    user.add_notification('unread_message_count', user.new_messages())
-AttributeError: 'function' object has no attribute 'add_notification'
-2018-06-06 17:20:40,706 ERROR: Exception on /messages [GET] [in c:\users\woongw~1\envs\flaskt~1\lib\site-packages\flask\app.py:1560]
-Traceback (most recent call last):
-  File "c:\users\woongw~1\envs\flaskt~1\lib\site-packages\flask\app.py", line 1982, in wsgi_app
-    response = self.full_dispatch_request()
-  File "c:\users\woongw~1\envs\flaskt~1\lib\site-packages\flask\app.py", line 1614, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-  File "c:\users\woongw~1\envs\flaskt~1\lib\site-packages\flask\app.py", line 1517, in handle_user_exception
-    reraise(exc_type, exc_value, tb)
-  File "c:\users\woongw~1\envs\flaskt~1\lib\site-packages\flask\app.py", line 1612, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "c:\users\woongw~1\envs\flaskt~1\lib\site-packages\flask\app.py", line 1598, in dispatch_request
-    return self.view_functions[rule.endpoint](**req.view_args)
-  File "c:\users\woongw~1\envs\flaskt~1\lib\site-packages\flask_login\utils.py", line 228, in decorated_view
-    return func(*args, **kwargs)
-  File "C:\Users\Woong Wen Tat\flask-microblog\app\main\routes.py", line 180, in messages
-    user.add_notification('unread_message_count', user.new_messages())
-AttributeError: 'function' object has no attribute 'add_notification'
-2018-06-06 17:20:42,851 ERROR: Exception on /messages [GET] [in c:\users\woongw~1\envs\flaskt~1\lib\site-packages\flask\app.py:1560]
-Traceback (most recent call last):
-  File "c:\users\woongw~1\envs\flaskt~1\lib\site-packages\flask\app.py", line 1982, in wsgi_app
-    response = self.full_dispatch_request()
-  File "c:\users\woongw~1\envs\flaskt~1\lib\site-packages\flask\app.py", line 1614, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-  File "c:\users\woongw~1\envs\flaskt~1\lib\site-packages\flask\app.py", line 1517, in handle_user_exception
-    reraise(exc_type, exc_value, tb)
-  File "c:\users\woongw~1\envs\flaskt~1\lib\site-packages\flask\app.py", line 1612, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "c:\users\woongw~1\envs\flaskt~1\lib\site-packages\flask\app.py", line 1598, in dispatch_request
-    return self.view_functions[rule.endpoint](**req.view_args)
-  File "c:\users\woongw~1\envs\flaskt~1\lib\site-packages\flask_login\utils.py", line 228, in decorated_view
-    return func(*args, **kwargs)
-  File "C:\Users\Woong Wen Tat\flask-microblog\app\main\routes.py", line 180, in messages
-    user.add_notification('unread_message_count', user.new_messages())
-AttributeError: 'function' object has no attribute 'add_notification'
-2018-06-06 17:21:48,565 ERROR: Exception on /messages [GET] [in c:\users\woongw~1\envs\flaskt~1\lib\site-packages\flask\app.py:1560]
-Traceback (most recent call last):
-  File "c:\users\woongw~1\envs\flaskt~1\lib\site-packages\flask\app.py", line 1982, in wsgi_app
-    response = self.full_dispatch_request()
-  File "c:\users\woongw~1\envs\flaskt~1\lib\site-packages\flask\app.py", line 1614, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-  File "c:\users\woongw~1\envs\flaskt~1\lib\site-packages\flask\app.py", line 1517, in handle_user_exception
-    reraise(exc_type, exc_value, tb)
-  File "c:\users\woongw~1\envs\flaskt~1\lib\site-packages\flask\app.py", line 1612, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "c:\users\woongw~1\envs\flaskt~1\lib\site-packages\flask\app.py", line 1598, in dispatch_request
-    return self.view_functions[rule.endpoint](**req.view_args)
-  File "c:\users\woongw~1\envs\flaskt~1\lib\site-packages\flask_login\utils.py", line 228, in decorated_view
-    return func(*args, **kwargs)
-  File "C:\Users\Woong Wen Tat\flask-microblog\app\main\routes.py", line 180, in messages
-    user.add_notification('unread_message_count', user.new_messages())
-AttributeError: 'function' object has no attribute 'add_notification'
-2018-06-06 17:23:58,094 ERROR: Exception on /messages [GET] [in c:\users\woongw~1\envs\flaskt~1\lib\site-packages\flask\app.py:1560]
-Traceback (most recent call last):
-  File "c:\users\woongw~1\envs\flaskt~1\lib\site-packages\flask\app.py", line 1982, in wsgi_app
-    response = self.full_dispatch_request()
-  File "c:\users\woongw~1\envs\flaskt~1\lib\site-packages\flask\app.py", line 1614, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-  File "c:\users\woongw~1\envs\flaskt~1\lib\site-packages\flask\app.py", line 1517, in handle_user_exception
-    reraise(exc_type, exc_value, tb)
-  File "c:\users\woongw~1\envs\flaskt~1\lib\site-packages\flask\app.py", line 1612, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "c:\users\woongw~1\envs\flaskt~1\lib\site-packages\flask\app.py", line 1598, in dispatch_request
-    return self.view_functions[rule.endpoint](**req.view_args)
-  File "c:\users\woongw~1\envs\flaskt~1\lib\site-packages\flask_login\utils.py", line 228, in decorated_view
-    return func(*args, **kwargs)
-  File "C:\Users\Woong Wen Tat\flask-microblog\app\main\routes.py", line 180, in messages
-    user.add_notification('unread_message_count', user.new_messages())
-AttributeError: 'function' object has no attribute 'add_notification'
+  File "C:\Users\Woong Wen Tat\flask-microblog\app\api\users.py", line 13, in get_users
+    page = request.args.get('page', 1, type=int)
+NameError: global name 'request' is not defined
+2018-06-07 15:11:17,505 INFO: Microblog startup [in C:\Users\Woong Wen Tat\flask-microblog\app\__init__.py:84]
+2018-06-07 15:21:11,500 INFO: Microblog startup [in C:\Users\Woong Wen Tat\flask-microblog\app\__init__.py:84]
+2018-06-07 15:21:19,927 INFO: Microblog startup [in C:\Users\Woong Wen Tat\flask-microblog\app\__init__.py:84]
