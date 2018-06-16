@@ -51,6 +51,9 @@ Jinja2 is the templating engine for flask, allowing you to use for loops and if 
 ## wtforms
 Wtforms is a library that allows you to write out forms and use them in your routers/controllers (in this application they seemed to be joined together), in your templates all you need to do is to call `{{ wtf.quick_form(form) }}` in order to render it. {{}} represents statements that are evaluated by the browser.
 
+## gravatar
+Gravatar is the boxy image profile picture that you see on most blogs for anonymous users, and can be added through their API.
+
 ## flask.g
 Flask.g is like a dict that lives in each context of the application, for each different users. 
 
