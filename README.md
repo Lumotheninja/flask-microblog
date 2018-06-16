@@ -2,10 +2,10 @@
 A microblog based on [Flask Mega-Tutorial](https://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-i-hello-world).
 
 # learning points
-flask, \_\_init.py\_\_, data modelling, alembic, jinja2, wtforms, flask.g, environment variables, unit testing, babel, string translation, elasticsearch, AJAX, popups, task queue
+flask, \_\_init.py\_\_, data modelling, alembic, jinja2, wtforms, gravatar, flask.g, environment variables, babel, yandex, elasticsearch, AJAX, task queue
 
 ## flask
-Flask is a micro-framework, based on jinja2 and werkzeug WSGI (web server gateway interface). It is unopinionated, meaning that it ccan be intergrated with almost everything and comes light.
+Flask is a micro-framework, based on jinja2 and werkzeug WSGI (web server gateway interface). It is unopinionated, meaning that it can be integrated with almost everything and comes light.
 
 ## \_\_init\_\_.py
 If you look into the file directory, you will see a lot of \_\_init\_\_.py files which are mostly empty, it just means that the code in the folder can be exported as a module in other code. Particularly in app/\_\_init\_\_.py you might see this
@@ -43,7 +43,7 @@ There are 3 types of relationships: one-to-one, one-to-many, and many-to-many. U
 Here you can see how the relationship is represented by a db.relationship. The backref argument is telling the Post class to reference the user via the author attribute. Some people might be confused with the user_id in Post, but this has is different from author. Author stores the object while user_id stores the id of the author. This relationship is only established in the sqlalchemy ORM and is not stored in the db itself.
 
 ## alembic
-Alembic is like git for db migration. Whenever you have made changes to your models, you will need to create a migration script, before migrating the data in the db for the new schema.
+Alembic is like git for db migration. Whenever you have made changes to your models, you will need to create a migration script, before migrating the data in the db.
 
 ## jinja2 
 Jinja2 is the templating engine for flask, allowing you to use for loops and if statements in html. The syntax for writing jinja statements are `{% some logic %}`.
@@ -52,24 +52,28 @@ Jinja2 is the templating engine for flask, allowing you to use for loops and if 
 Wtforms is a library that allows you to write out forms and use them in your routers/controllers (in this application they seemed to be joined together), in your templates all you need to do is to call `{{ wtf.quick_form(form) }}` in order to render it. {{}} represents statements that are evaluated by the browser.
 
 ## flask.g
-Flask.g is like a dict that lives in each context of the application, basically for each different users they will have their own flask.g. You can store state in flask.g that is global for the user.
+Flask.g is like a dict that lives in each context of the application, for each different users. 
 
 ## environment variables
-The app sometimes will have environment variables that is private(say your Google API key); you will need to keep it save. The best way is to keep it in an env file and reading it using python dotenv library.
-
-## unit testing
-The whole point of unit testing is to test functions piecewise, and it is best to create unit test for each module that you have completed as you go along. Luckily for us, python has a builtin unittest library. It uses the assert syntax 
+The app sometimes will have environment variables that is private(say your Google API key); you will need to keep it safe. The best way is to keep it in an env file and reading it using python dotenv library as an os.environ variable.
 
 ## babel
+A translation module that helps with translating strings of text in you web app
 
-## translation
+## yandex
+Instead of using Microsoft translation services like in the tutorial, I used [Yandex api](https://translate.yandex.com/)
 
 ## elasticsearch
+Elasticsearch is the search engine that allows you to fuzzy search, which means they consider the closeness of your query string with strings in the documents and return you the one with the highest match score. Elasticsearch is a service, which means you will have to start elasticsearch somewhere and connect to it with your web app.
 
 ## AJAX
-
-## popups
+AJAX stands for Asynchronous JavaScript And XML. It is used when you want to load something without refreshing the page as most data can only be retrieved from the server side from a GET or POST request
 
 ## task queues
+Task queue uses queue (FILO - first in last out) to queue up task that are asynchronous to the web application itself, such as downloading data. The common task queue for python is called celery which needs to be run as a service. Note that Windows does not support celery anymore. To pass message in and out of task queues, you will also need a message broker, such as redis or rabbitmq. Task queues support states, which means you can use it to see which tasks are being queued, ran etc. One way to schedule a cron job that runs perpetually is to have a task that adds itself to the task queue once it has been done.
 
 # future features
+I think Microblog is an excellent tutorial and I am glad that I took it as my first web development course\
+I think some great features that can be implemented further:
+1. Options to allow people to upload photos to their profile
+2. Options to allow people to upload files to their post
